@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WellcomeSceneController">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <Button id="gameButton" fx:id="gameButton" layoutX="74.0" layoutY="175.0" mnemonicParsing="false" onAction="#GameButtonClick" text="Game" />
+              <Button id="quitButton" fx:id="quitButton" layoutX="78.0" layoutY="265.0" mnemonicParsing="false" onAction="#QuitClick" text="Quit" />
+              <Button disable="true" layoutX="69.0" layoutY="215.0" mnemonicParsing="false" text="Options" />
+            <TextField id="nameField" fx:id="nameField" layoutX="117.0" layoutY="141.0" prefHeight="25.0" prefWidth="115.0" />
+            <Text layoutX="33.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YourName:" />
+            </children>
+        </Pane>
+        <Label layoutX="201.0" layoutY="14.0" prefHeight="32.0" prefWidth="257.0" text="ADVENTURE GAME" wrapText="true">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

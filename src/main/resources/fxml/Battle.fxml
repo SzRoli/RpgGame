@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BattleController">
+    <children>
+      <Pane layoutX="351.0" layoutY="260.0" prefHeight="137.0" prefWidth="250.0">
+         <children>
+            <Button id="backButton" fx:id="backButton" layoutX="184.0" layoutY="98.0" mnemonicParsing="false" onAction="#backButtonClick" text="Back" textAlignment="CENTER" />
+         </children>
+      </Pane>
+        <Pane layoutX="-1.0" layoutY="8.0" prefHeight="253.0" prefWidth="297.0">
+            <children>
+                <ImageView fitHeight="194.0" fitWidth="235.0" layoutX="49.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/man.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="62.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your HP:" />
+                <Text id="yourHpText" fx:id="yourHpText" layoutX="130.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="73.984375" />
+            </children>
+      </Pane>
+        <Pane layoutX="297.0" layoutY="7.0" prefHeight="253.0" prefWidth="304.0">
+            <children>
+                <ImageView fitHeight="148.0" fitWidth="235.0" layoutX="41.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/man.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="59.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enemy HP:" />
+                <Text id="enemyHpText" fx:id="enemyHpText" layoutX="142.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="73.984375" />
+            </children></Pane>
+        <Pane layoutY="274.0" prefHeight="126.0" prefWidth="277.0">
+            <children>
+                <TextArea id="textArea" fx:id="textArea" editable="false" layoutX="-1.0" prefHeight="126.0" prefWidth="277.0" />
+            </children>
+        </Pane>
+
+    </children>
+</AnchorPane>
