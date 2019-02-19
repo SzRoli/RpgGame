@@ -1,8 +1,11 @@
 package controller;
 
+import com.sun.org.apache.xerces.internal.dom.ParentNode;
 import dao.PlayerEntity;
 import dao.PlayerEntityDAOImpl;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,8 +15,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import modell.GameMaster;
 
 import java.io.IOException;
@@ -84,6 +90,8 @@ public class CharacterController implements Initializable {
     @FXML
     private Button resetButton;
 
+    @FXML
+    private AnchorPane rootAnchorPane;
     @FXML
     void critChancePlusButtonClick(ActionEvent event) {
 
@@ -159,14 +167,38 @@ public class CharacterController implements Initializable {
 
     @FXML
     void adventureButtonClick(ActionEvent event)throws IOException {
+        makeFadeOut();
 
-        Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Battle.fxml"));
-        Scene newGameViewScene = new Scene(newGameViewParent);
 
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+    }
 
-        window.setScene(newGameViewScene);
-        window.show();
+    private void makeFadeOut(){
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(rootAnchorPane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+
+        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                loadNextScene();
+            }
+        });
+        fadeTransition.play();
+    }
+
+    private void loadNextScene(){
+        try{
+            Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Battle.fxml"));
+            Scene newGameViewScene = new Scene(newGameViewParent);
+
+            Stage window = (Stage) rootAnchorPane.getScene().getWindow();
+
+            window.setScene(newGameViewScene);
+            window.show();
+        }catch(IOException ex){
+            System.out.println("Nope! "+ex);
+        }
 
     }
     void setFields(){

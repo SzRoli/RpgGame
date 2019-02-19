@@ -2,10 +2,13 @@ package controller;
 
 import dao.PlayerEntity;
 import dao.PlayerEntityDAOImpl;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,13 +16,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import modell.GameMaster;
+import org.apache.derby.impl.sql.CursorInfo;
 import sun.font.TextLabel;
 
-import java.awt.event.MouseEvent;
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
@@ -71,6 +80,11 @@ public class BattleController implements Initializable{
     private Text lvlText;
 
     @FXML
+    private AnchorPane rootPane;
+
+    @FXML
+    private Text dmgText;
+    @FXML
     void Hit(ActionEvent event) {
         attack();
     }
@@ -106,15 +120,22 @@ public class BattleController implements Initializable{
 
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
-        Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Character.fxml"));
-        Scene newGameViewScene = new Scene(newGameViewParent);
-
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(newGameViewScene);
-        window.show();
+        makeFadeTrans(1,0);
     }
+    private void loadNextScene(){
+        try{
+            Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Character.fxml"));
+            Scene newGameViewScene = new Scene(newGameViewParent);
 
+            Stage window = (Stage) rootPane.getScene().getWindow();
+
+            window.setScene(newGameViewScene);
+            window.show();
+        }catch(IOException ex){
+            System.out.println("Nope! "+ex);
+        }
+
+    }
     void winCheck(int currentHp){
         if(currentHp <= 0){
             playerEntity.setMoney((int)(playerEntity.getMoney()+(50*((double)lvl/2))*playerEntity.getResetCount()));
@@ -134,10 +155,34 @@ public class BattleController implements Initializable{
         }
     }
     void attack() {
+
             if(random.nextInt(100) <= playerEntity.getCritical()){
                 enemyHp -= yourDmg*playerEntity.getCriticalDmg();
+                dmgText.setOpacity(0);
+                dmgText.setFont(Font.font(42));
+                dmgText.setFill(Color.ORANGE);
+                //Point mouse = MouseInfo.getPointerInfo().getLocation();
+                //System.out.println(mouse);
+                //dmgText.setLayoutX(mouse.x);
+                //dmgText.setLayoutY(mouse.y);
+
+                dmgText.setText(""+yourDmg*playerEntity.getCriticalDmg()+" Hit");
+
+                makeFadeTrandText();
             }else{
                 enemyHp -= yourDmg;
+                dmgText.setOpacity(0);
+                dmgText.setFill(Color.RED);
+                dmgText.setFont(Font.font(32));
+                //Point mouse = MouseInfo.getPointerInfo().getLocation();
+                //System.out.println(rootPane.getHeight() + "" + rootPane.getWidth());
+                //dmgText.setLayoutX(rootPane.getWidth()+10);
+                //dmgText.setLayoutY(rootPane.getHeight()-10);
+
+                dmgText.setText(""+yourDmg+" Hit");
+
+
+                makeFadeTrandText();
             }
 
             opaci = (double)enemyHp/enemyMaxHp;
@@ -161,8 +206,31 @@ public class BattleController implements Initializable{
 
 
     }
-
+    private void makeFadeTrans(int start, int end){
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(rootPane);
+        fadeTransition.setFromValue(start);
+        fadeTransition.setToValue(end);
+        if(end < start){
+            fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent event) {
+                    loadNextScene();
+                }
+            });
+        }
+        fadeTransition.play();
+    }
+    private void makeFadeTrandText(){
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(dmgText);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.play();
+    }
     public void initialize(URL url, ResourceBundle rb){
+        makeFadeTrans(0,1);
         lvlText.setText(""+lvl);
         yourMoney.setText(""+playerEntity.getMoney()+"G");
         enemyHp = 400 * lvl;

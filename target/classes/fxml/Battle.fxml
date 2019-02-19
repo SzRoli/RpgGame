@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BattleController">
+<AnchorPane id="rootPane" fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BattleController">
     <children>
       <Pane layoutX="555.0" layoutY="372.0" prefHeight="25.0" prefWidth="46.0" />
         <Pane layoutX="12.0" layoutY="7.0" prefHeight="369.0" prefWidth="671.0">
@@ -45,6 +45,11 @@
       <Button id="previousLvlButton" fx:id="previousLvlButton" layoutX="36.0" layoutY="33.0" mnemonicParsing="false" onAction="#previousLvlButtonClick" text="Previous LVL" />
       <Button id="nextLvlButton" fx:id="nextLvlButton" layoutX="473.0" layoutY="33.0" mnemonicParsing="false" onAction="#nextLvlButtonClick" text="Next LVL" />
       <TextField id="yourMoney" fx:id="yourMoney" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="76.0" prefHeight="25.0" prefWidth="117.0" />
+      <Text id="dmgText" fx:id="dmgText" disable="true" fill="RED" layoutX="307.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="271.0">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Text>
 
     </children>
 </AnchorPane>
