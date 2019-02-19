@@ -32,21 +32,10 @@
                 <Text id="classText" fx:id="classText" layoutX="126.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="54.13671875" />
             </children></Pane>
         <TextField id="dmgBar" fx:id="dmgBar" editable="false" layoutX="58.0" layoutY="256.0" prefHeight="25.0" prefWidth="42.0" />
-        <TextField id="defBar" fx:id="defBar" editable="false" layoutX="58.0" layoutY="287.0" prefHeight="25.0" prefWidth="42.0" />
-        <TextField id="dogeBar" fx:id="dogeBar" editable="false" layoutX="58.0" layoutY="318.0" prefHeight="25.0" prefWidth="42.0" />
-        <Text fill="#070000" layoutX="17.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HP:" />
         <Text layoutX="11.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DMG:" />
-        <Text layoutX="15.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEF:" />
-        <Text layoutX="9.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOGE:" />
-        <!--<Button id="hpPlus" fx:id="hpPlus" layoutX="158.0" layoutY="224.0" mnemonicParsing="false" onAction="#hpPlusButtonClick" text="+" />
         <Button id="dmgPlus" fx:id="dmgPlus" layoutX="158.0" layoutY="256.0" mnemonicParsing="false" onAction="#dmgPlusButtonClick" text="+" />
-        <Button id="defPlus" fx:id="defPlus" layoutX="158.0" layoutY="287.0" mnemonicParsing="false" onAction="#defPlusButtonClick" text="+" />!-->
-        <Button id="dogePlus" fx:id="dogePlus" layoutX="158.0" layoutY="318.0" mnemonicParsing="false" onAction="#dogePlusButtonClick" text="+" />
-        <TextField id="dogeBargold" fx:id="dogeBarGold" editable="false" layoutX="109.0" layoutY="318.0" prefHeight="25.0" prefWidth="42.0" />
-        <TextField id="defBarGold" fx:id="defBarGold" editable="false" layoutX="109.0" layoutY="287.0" prefHeight="25.0" prefWidth="42.0" />
         <TextField id="dmgBarGold" fx:id="dmgBarGold" editable="false" layoutX="109.0" layoutY="256.0" prefHeight="25.0" prefWidth="42.0" />
-        <TextField id="hpBarGold" fx:id="hpBarGold" editable="false" layoutX="109.0" layoutY="224.0" prefHeight="25.0" prefWidth="42.0" />
-        <!--<Button layoutX="461.0" layoutY="200.0" mnemonicParsing="false" onAction="#adventureButtonClick" prefHeight="92.0" prefWidth="95.0" text="Adventure" />!-->
+        <Button layoutX="461.0" layoutY="200.0" mnemonicParsing="false" onAction="#adventureButtonClick" prefHeight="92.0" prefWidth="95.0" text="Adventure" />
         <Button disable="true" layoutX="323.0" layoutY="203.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="95.0" text="Shop" />
         <TextField id="goldAmountField" fx:id="goldAmountField" editable="false" layoutX="183.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" />
         <Text layoutX="181.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test Your Luck">
@@ -60,10 +49,9 @@
                 <TextField id="number" fx:id="number" layoutX="50.0" layoutY="111.0" prefHeight="25.0" prefWidth="23.0" />
                 <Text layoutX="-4.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chosse a number between 1 and 10" textAlignment="CENTER" wrappingWidth="130.73828125" />
                 <Text layoutX="19.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Put your money" />
-                <!--<Button layoutX="42.0" layoutY="144.0" mnemonicParsing="false" onAction="#PlayButtonClick" text="Play" />!-->
+                <Button layoutX="42.0" layoutY="144.0" mnemonicParsing="false" onAction="#PlayButtonClick" text="Play" />
                 <TextField id="youGet" fx:id="youGet" layoutX="4.0" layoutY="188.0" prefHeight="25.0" prefWidth="122.0" />
             </children>
         </Pane>
-        <TextField id="hpBar" fx:id="hpBar" editable="false" layoutX="58.0" layoutY="224.0" prefHeight="25.0" prefWidth="42.0" />
     </children>
 </AnchorPane>

@@ -5,20 +5,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity//emiat entity
-@Table(name = "PLAYER", schema = "MY_OWN_SCHEMA")
+@Table(name = "PLAYERS", schema = "MY_OWN_SCHEMA")
 @NamedQueries({
         //valamilyen feltételel lekérdezés, vagy csoportositás stb..
         @NamedQuery(name = "PlayerEntity.findPlayerMoney", query = "SELECT e.money FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerByName", query = "SELECT e FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerName", query = "SELECT e.name FROM PlayerEntity e where e.name = :name"),
-        @NamedQuery(name = "PlayerEntity.findPlayerHp", query = "SELECT e.hp FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerDmg", query = "SELECT e.dmg FROM PlayerEntity e where e.name = :name"),
-        @NamedQuery(name = "PlayerEntity.findPlayerDef", query = "SELECT e.def FROM PlayerEntity e where e.name = :name"),
-        @NamedQuery(name = "PlayerEntity.findPlayerDoge", query = "SELECT e.doge FROM PlayerEntity e where e.name = :name"),
-        //@NamedQuery(name = "PlayerEntity.findPlayerbyClass", query = "SELECT e.classes FROM PlayerEntity e where e.myname = :name"),
-        //@NamedQuery(name = "PlayerEntity.findPlayerbySpeacies", query = "SELECT e.speacies FROM PlayerEntity e where e.myname = :name"),
-        //@NamedQuery(name = "PlayerEntity.findPlayerbyGender", query = "SELECT e.gender FROM PlayerEntity e where e.myname = :name"),
-        //@NamedQuery(name = "PlayerEntity.findPlayer", query = "SELECT e FROM PlayerEntity AS e")
+        @NamedQuery(name = "PlayerEntity.findPlayerLvl", query = "SELECT e.lvl FROM PlayerEntity e where e.name = :name")
 })
 
 public class PlayerEntity implements Serializable {
@@ -31,17 +25,10 @@ public class PlayerEntity implements Serializable {
     @Column(name = "MONEY")
     private Integer money;
 
-    @Column(name = "HP")
-    private Integer hp;
 
     @Column(name = "DMG")
     private Integer dmg;
 
-    @Column(name = "DEF")
-    private Integer def;
-
-    @Column(name = "DOGE")
-    private Integer doge;
 
     @Column(name = "CLASS")
     private String classes;
@@ -54,6 +41,9 @@ public class PlayerEntity implements Serializable {
 
     @Column(name = "NAME", unique = true, nullable = false)
     private String name;
+
+    @Column(name = "LVL")
+    private Integer lvl;
 
 
     public Long getId() {
@@ -73,13 +63,10 @@ public class PlayerEntity implements Serializable {
 
     public void setName(String name) { this.name = name; }
 
-    public Integer getHp() {
-        return hp;
-    }
+    public Integer getLvl(){ return this.lvl; }
 
-    public void setHp(Integer hp) {
-        this.hp = hp;
-    }
+    public void setLvl(Integer lvl) { this.lvl = lvl; }
+
 
     public Integer getDmg() {
         return dmg;
@@ -89,21 +76,6 @@ public class PlayerEntity implements Serializable {
         this.dmg = dmg;
     }
 
-    public Integer getDef() {
-        return def;
-    }
-
-    public void setDef(Integer def) {
-        this.def = def;
-    }
-
-    public Integer getDoge() {
-        return doge;
-    }
-
-    public void setDoge(Integer doge) {
-        this.doge = doge;
-    }
 
     public String getClasses() {
         return classes;

@@ -3,7 +3,7 @@ package modell;
 public class Ai {
 
     private int hp;
-    private int dbmg;
+    private int dmg;
     private int def;
     private int doge;
 
@@ -19,12 +19,12 @@ public class Ai {
         this.hp = hp;
     }
 
-    public int getDbmg() {
-        return dbmg;
+    public int getDbg() {
+        return dmg;
     }
 
-    public void setDbmg(int dbmg) {
-        this.dbmg = dbmg;
+    public void setDbmg(int dmg) {
+        this.dmg = dmg;
     }
 
     public int getDef() {

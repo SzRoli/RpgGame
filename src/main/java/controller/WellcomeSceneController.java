@@ -37,16 +37,7 @@ public class WellcomeSceneController implements Initializable{
 
     @FXML
     private TextField nameField;
-    @FXML
-    void NewGameClick(ActionEvent event) throws IOException {
-        Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/NewGame.fxml"));
-        Scene newGameViewScene = new Scene(newGameViewParent);
 
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(newGameViewScene);
-        window.show();
-    }
     @FXML
     void GameButtonClick(ActionEvent event) throws IOException {
 
@@ -57,7 +48,7 @@ public class WellcomeSceneController implements Initializable{
         if(playerEntity == null){
             playerEntity = new PlayerEntity();
             playerEntity.setName(NAME);
-
+            playerEntity.setLvl(1);
             playerEntityDAO.save(playerEntity);
 
             Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/NewGame.fxml"));
@@ -71,6 +62,7 @@ public class WellcomeSceneController implements Initializable{
 
 
         }else{
+
             Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Character.fxml"));
             Scene newGameViewScene = new Scene(newGameViewParent);
 

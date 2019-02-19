@@ -26,7 +26,7 @@
   -->
 
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
-    <persistence-unit name="player" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="players" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
         <class>dao.PlayerEntity</class>

@@ -136,39 +136,27 @@ public class NewGameController implements Initializable {
         if(warriorCheckBox.isSelected()){
             playerEntity.setMoney(500);
             playerEntity.setClasses("Warrior");
-            playerEntity.setHp(150);
             playerEntity.setDmg(16);
-            playerEntity.setDef(5);
-            playerEntity.setDoge(4);
 
         }
 
         if(shielderCheckBox.isSelected()){
             playerEntity.setMoney(500);
             playerEntity.setClasses("Shielder");
-            playerEntity.setHp(150);
             playerEntity.setDmg(5);
-            playerEntity.setDef(16);
-            playerEntity.setDoge(4);
 
         }
 
         if(rougeCheckBox.isSelected()){
             playerEntity.setMoney(500);
             playerEntity.setClasses("Rouge");
-            playerEntity.setHp(150);
             playerEntity.setDmg(5);
-            playerEntity.setDef(4);
-            playerEntity.setDoge(16);
 
         }
         if(wizzardCheckBox.isSelected()){
             playerEntity.setMoney(500);
             playerEntity.setClasses("Wizzard");
-            playerEntity.setHp(150);
             playerEntity.setDmg(16);
-            playerEntity.setDef(4);
-            playerEntity.setDoge(5);
 
         }
 

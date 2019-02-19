@@ -32,7 +32,7 @@ public class CharacterController implements Initializable {
 
     Random random = new Random();
     int randomNumber;
-    double hpGoldAmount = 0.1;
+    double hpGoldAmount = 0.1546;
     double dmgGoldAmount = 10.1;
     double defGoldAmount = 10.1;
     double dogeGoldAmount = 10.1;
@@ -44,32 +44,23 @@ public class CharacterController implements Initializable {
     @FXML
     private TextField dmgBar;
 
-    @FXML
-    private Button dogePlus;
 
     @FXML
     private TextField dmgBarGold;
 
-    @FXML
-    private TextField hpBar;
 
-    @FXML
-    private Button hpPlus;
 
     @FXML
     private TextField nameText;
 
-    @FXML
-    private TextField defBar;
+
 
     @FXML
     private Text classText;
 
-    @FXML
-    private TextField hpBarGold;
 
-    @FXML
-    private Button defPlus;
+
+
 
     @FXML
     private ImageView speaciesPic;
@@ -83,15 +74,6 @@ public class CharacterController implements Initializable {
     @FXML
     private Button dmgPlus;
 
-    @FXML
-    private TextField dogeBar;
-
-    @FXML
-    private TextField dogeBarGold;
-
-    @FXML
-    private TextField defBarGold;
-
 
     @FXML
     private TextField yourMoney;
@@ -102,15 +84,15 @@ public class CharacterController implements Initializable {
     @FXML
     private TextField youGet;
 
-    /*@FXML
+    @FXML
     void PlayButtonClick(ActionEvent event) {
-        if(gameMaster.getEntity().getMoney() > 0 && goldAmount >= Integer.parseInt(yourMoney.getText()) &&
-                !number.getText().isEmpty() && Integer.parseInt(number.getText()) < 11 && Integer.parseInt(number.getText()) > 0){
-            newGameController.goldAmount -= Integer.parseInt(yourMoney.getText());
+        if(playerEntity.getMoney() > 0 && playerEntity.getMoney() >= Integer.parseInt(yourMoney.getText()) &&
+                number.getText() != null && Integer.parseInt(number.getText()) < 11 && Integer.parseInt(number.getText()) > 0){
+            playerEntity.setMoney(playerEntity.getMoney()-Integer.parseInt(yourMoney.getText()));
             randomNumber = random.nextInt(10)+1;
             setFields();
             if(randomNumber == Integer.parseInt(number.getText())){
-                newGameController.goldAmount += Integer.parseInt(yourMoney.getText()) * 10;
+                playerEntity.setMoney(playerEntity.getMoney()+Integer.parseInt(yourMoney.getText()) * 10);
                 setFields();
                 youGet.setText("You win: " + (Integer.parseInt(yourMoney.getText()) * 10));
             }else{
@@ -119,54 +101,24 @@ public class CharacterController implements Initializable {
         }
 
 
-    }*/
-
-   /* @FXML
-    void hpPlusButtonClick(ActionEvent event) {
-        if(newGameController.goldAmount >=hpGoldAmount){
-            newGameController.goldAmount -= hpGoldAmount;
-            hpGoldAmount = (int)(hpGoldAmount* 1.1);
-            newGameController.hp++;
-            setFields();
-        }
-
-    }*/
-
-   /* @FXML
-    void dmgPlusButtonClick(ActionEvent event) {
-        if(newGameController.goldAmount >=dmgGoldAmount) {
-            newGameController.goldAmount -= dmgGoldAmount;
-            dmgGoldAmount = (int) (dmgGoldAmount * 1.1);
-            newGameController.dmg++;
-            setFields();
-        }
     }
-*/
-   /* @FXML
-    void defPlusButtonClick(ActionEvent event) {
-        if(newGameController.goldAmount >=defGoldAmount){
-            newGameController.goldAmount -= defGoldAmount;
-            defGoldAmount = (int) (defGoldAmount*1.1);
-            newGameController.def++;
-            setFields();
-        }
 
 
-    }*/
 
     @FXML
-    void dogePlusButtonClick(ActionEvent event) {
-        if((int)(playerEntity.getDoge()*dogeGoldAmount) <= playerEntity.getMoney()){
-            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getDoge()*dogeGoldAmount)));
+    void dmgPlusButtonClick(ActionEvent event) {
+        if((int)(playerEntity.getDmg()*dmgGoldAmount) <= playerEntity.getMoney()){
+            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getDmg()*dmgGoldAmount)));
 
-            playerEntity.setDoge(playerEntity.getDoge()+1);
+            playerEntity.setDmg(playerEntity.getDmg()+1);
             setFields();
             playerEntityDAO.save(playerEntity);
         }
-
     }
 
-    /*@FXML
+
+
+    @FXML
     void adventureButtonClick(ActionEvent event)throws IOException {
 
         Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Battle.fxml"));
@@ -177,33 +129,22 @@ public class CharacterController implements Initializable {
         window.setScene(newGameViewScene);
         window.show();
 
-    }*/
+    }
 
-   /* void setGolds(){
-        hpGoldAmount = 25;
-        dmgGoldAmount = 25;
-        defGoldAmount = 25;
-        dogeGoldAmount = 25;
-
-    }*/
     void setPlayerEntity(){
         playerEntity.setName(playerEntityDAO.getPlayerName(WellcomeSceneController.NAME));
         playerEntity.setMoney(playerEntityDAO.getPlayerMoney(WellcomeSceneController.NAME));
-        playerEntity.setHp(playerEntityDAO.getPlayerHp(WellcomeSceneController.NAME));
         playerEntity.setDmg(playerEntityDAO.getPlayerDmg(WellcomeSceneController.NAME));
     }
     void setFields(){
         nameText.setText(playerEntity.getName());
         goldAmountField.setText(""+(playerEntity.getMoney())+"G");
         dmgBar.setText(""+(playerEntity.getDmg()));
-        hpBar.setText(""+(playerEntity.getHp()));
-        defBar.setText(""+(playerEntity.getDef()));
-        dogeBar.setText(""+(playerEntity.getDoge()));
 
-        hpBarGold.setText(""+ (int)(playerEntity.getHp() * hpGoldAmount) +"G");
+
+
         dmgBarGold.setText(""+ (int)(playerEntity.getDmg() * dmgGoldAmount) +"G");
-        defBarGold.setText(""+ (int)(playerEntity.getDef() * defGoldAmount) +"G");
-        dogeBarGold.setText(""+ (int)(playerEntity.getDoge() * dogeGoldAmount) + "G");
+
 
         classText.setText(playerEntity.getClasses());
         speaciesText.setText(playerEntity.getSpeacies());
