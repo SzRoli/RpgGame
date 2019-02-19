@@ -12,10 +12,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import modell.GameMaster;
+import sun.font.TextLabel;
 
 import java.awt.event.MouseEvent;
 import java.io.IOException;
@@ -31,10 +33,10 @@ public class BattleController implements Initializable{
 
     public PlayerEntityDAOImpl playerEntityDAO = PlayerEntityDAOImpl.getPlayerEntityDAOImpl();
 
-    public static PlayerEntity playerEntity = WellcomeSceneController.playerEntityDAO.findPlayerbyName(WellcomeSceneController.NAME);
+    public static PlayerEntity playerEntity = WellcomeSceneController.playerEntityDAO.findPlayerByName(WellcomeSceneController.NAME);
 
 
-
+    Random random = new Random();
     int dmg = playerEntity.getDmg();
     int currentHp;
     double opaci = 1.0;
@@ -47,6 +49,8 @@ public class BattleController implements Initializable{
     @FXML
     private Button previousLvlButton;
 
+    @FXML
+    private TextField yourMoney;
 
     @FXML
     private ProgressBar hpBar;
@@ -56,6 +60,9 @@ public class BattleController implements Initializable{
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private Button nextButton;
 
     @FXML
     private Button hitButton;
@@ -82,6 +89,20 @@ public class BattleController implements Initializable{
         }
     }
 
+    @FXML
+    void nextLvlButtonClick(ActionEvent event) {
+        if(lvl<playerEntity.getLvl()){
+            opaci=1.0;
+            hpBar.setProgress(opaci);
+            enemyMaxHp+=400;
+            enemyHp = enemyMaxHp;
+            enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
+            lvl++;
+            lvlText.setText(""+lvl);
+
+        }
+    }
+
 
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
@@ -96,21 +117,33 @@ public class BattleController implements Initializable{
 
     void winCheck(int currentHp){
         if(currentHp <= 0){
-            playerEntity.setMoney(playerEntity.getMoney()+50);
+            playerEntity.setMoney((int)(playerEntity.getMoney()+(50*((double)lvl/2))*playerEntity.getResetCount()));
             enemyHp = enemyMaxHp + 400;
             enemyMaxHp = enemyHp;
             enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
             lvl++;
-            playerEntity.setLvl(lvl);
+            if(lvl>playerEntity.getLvl()){
+                playerEntity.setLvl(lvl);
+            }
+
             lvlText.setText(""+lvl);
             playerEntityDAO.save(playerEntity);
+            yourMoney.setText(""+playerEntity.getMoney()+"G");
+            opaci = (double)enemyHp/enemyMaxHp;
+            hpBar.setProgress(opaci);
         }
     }
     void attack() {
+            if(random.nextInt(100) <= playerEntity.getCritical()){
+                enemyHp -= yourDmg*playerEntity.getCriticalDmg();
+            }else{
+                enemyHp -= yourDmg;
+            }
 
-            hpBar.setProgress(opaci);
-            enemyHp -= yourDmg;
             opaci = (double)enemyHp/enemyMaxHp;
+            hpBar.setProgress(opaci);
+
+
 
             if(enemyMaxHp/1000>0){
                 if(enemyHp/1000 > 0){
@@ -131,7 +164,7 @@ public class BattleController implements Initializable{
 
     public void initialize(URL url, ResourceBundle rb){
         lvlText.setText(""+lvl);
-
+        yourMoney.setText(""+playerEntity.getMoney()+"G");
         enemyHp = 400 * lvl;
         enemyMaxHp=enemyHp;
 

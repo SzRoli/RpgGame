@@ -20,8 +20,8 @@ public class DBManager {
     }
 
     public void connectDB() throws Exception{
-        //etity menegreket tudok létrehozni
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("players");
+        //etity menegereket tudok létrehozni
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tablea");
         entityManager = entityManagerFactory.createEntityManager();
 
 

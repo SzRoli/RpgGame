@@ -5,14 +5,18 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity//emiat entity
-@Table(name = "PLAYERS", schema = "MY_OWN_SCHEMA")
+@Table(name = "TABLEA", schema = "MY_OWN_SCHEMA")
 @NamedQueries({
         //valamilyen feltételel lekérdezés, vagy csoportositás stb..
         @NamedQuery(name = "PlayerEntity.findPlayerMoney", query = "SELECT e.money FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerByName", query = "SELECT e FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerName", query = "SELECT e.name FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerDmg", query = "SELECT e.dmg FROM PlayerEntity e where e.name = :name"),
-        @NamedQuery(name = "PlayerEntity.findPlayerLvl", query = "SELECT e.lvl FROM PlayerEntity e where e.name = :name")
+        @NamedQuery(name = "PlayerEntity.findPlayerLvl", query = "SELECT e.lvl FROM PlayerEntity e where e.name = :name"),
+        @NamedQuery(name = "PlayerEntity.findPlayerCritical", query = "SELECT e.critical FROM PlayerEntity e where e.name = :name"),
+        @NamedQuery(name = "PlayerEntity.findPlayerCriticalDmg", query = "SELECT e.criticalDmg FROM PlayerEntity e where e.name = :name"),
+        @NamedQuery(name = "PlayerEntity.findPlayerResetCount", query = "SELECT e.resetCount FROM PlayerEntity e where e.name = :name")
+
 })
 
 public class PlayerEntity implements Serializable {
@@ -25,25 +29,25 @@ public class PlayerEntity implements Serializable {
     @Column(name = "MONEY")
     private Integer money;
 
-
     @Column(name = "DMG")
     private Integer dmg;
-
-
-    @Column(name = "CLASS")
-    private String classes;
-
-    @Column(name = "SPEACIES")
-    private String speacies;
-
-    @Column(name = "GENDER")
-    private String gender;
 
     @Column(name = "NAME", unique = true, nullable = false)
     private String name;
 
     @Column(name = "LVL")
     private Integer lvl;
+
+    @Column (name = "CRITICAL")
+    private Integer critical;
+
+    @Column (name = "CRITICALDMG")
+    private Integer criticalDmg;
+
+    @Column (name = "RESETCOUNT")
+    private Integer resetCount;
+
+
 
 
     public Long getId() {
@@ -76,28 +80,27 @@ public class PlayerEntity implements Serializable {
         this.dmg = dmg;
     }
 
-
-    public String getClasses() {
-        return classes;
+    public Integer getCritical() {
+        return this.critical;
     }
 
-    public void setClasses(String classes) {
-        this.classes = classes;
+    public void setCritical(Integer critical) {
+        this.critical = critical;
     }
 
-    public String getSpeacies() {
-        return speacies;
+    public Integer getCriticalDmg() {
+        return this.criticalDmg;
     }
 
-    public void setSpeacies(String speacies) {
-        this.speacies = speacies;
+    public void setCriticalDmg(Integer criticalDmg) {
+        this.criticalDmg = criticalDmg;
     }
 
-    public String getGender() {
-        return gender;
+    public Integer getResetCount() {
+        return this.resetCount;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setResetCount(Integer resetCount) {
+        this.resetCount = resetCount;
     }
 }

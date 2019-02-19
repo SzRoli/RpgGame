@@ -27,8 +27,6 @@ public class WellcomeSceneController implements Initializable{
 
     public static String NAME;
 
-
-
     @FXML
     private Button quitButton;
 
@@ -43,15 +41,20 @@ public class WellcomeSceneController implements Initializable{
 
         NAME = nameField.getText();
 
-        playerEntity = playerEntityDAO.findPlayerbyName(NAME);
+        playerEntity = playerEntityDAO.findPlayerByName(NAME);
 
         if(playerEntity == null){
             playerEntity = new PlayerEntity();
             playerEntity.setName(NAME);
+            playerEntity.setMoney(500);
             playerEntity.setLvl(1);
+            playerEntity.setDmg(16);
+            playerEntity.setCritical(8);
+            playerEntity.setCriticalDmg(2);
+            playerEntity.setResetCount(0);
             playerEntityDAO.save(playerEntity);
 
-            Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/NewGame.fxml"));
+            Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Character.fxml"));
             Scene newGameViewScene = new Scene(newGameViewParent);
 
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

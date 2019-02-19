@@ -44,7 +44,7 @@ public class PlayerEntityDAOImpl {
     }
 
 
-    public PlayerEntity findPlayerbyName(String name) {
+    public PlayerEntity findPlayerByName(String name) {
         try {
             Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerByName");
             query.setParameter("name", name);
@@ -112,6 +112,57 @@ public class PlayerEntityDAOImpl {
     public Integer getPlayerLvl(String name){
         try{
             Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerLvl");
+            query.setParameter("name", name);
+            int entity = (Integer) query.getSingleResult();
+
+            return entity;
+        }catch (NoResultException e) {
+            System.out.println("Nem található ilyen Entity");
+            return null;
+        }catch (NullPointerException e) {
+
+            System.out.println("Ilyen Entity nincs az adatbázisban");
+            return null;
+        }
+    }
+
+    public Integer getPlayerCriticalDmg(String name){
+        try{
+            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerCriticalDmg");
+            query.setParameter("name", name);
+            int entity = (Integer) query.getSingleResult();
+
+            return entity;
+        }catch (NoResultException e) {
+            System.out.println("Nem található ilyen Entity");
+            return null;
+        }catch (NullPointerException e) {
+
+            System.out.println("Ilyen Entity nincs az adatbázisban");
+            return null;
+        }
+    }
+
+    public Integer getPlayerCritical(String name){
+        try{
+            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerCritical");
+            query.setParameter("name", name);
+            int entity = (Integer) query.getSingleResult();
+
+            return entity;
+        }catch (NoResultException e) {
+            System.out.println("Nem található ilyen Entity");
+            return null;
+        }catch (NullPointerException e) {
+
+            System.out.println("Ilyen Entity nincs az adatbázisban");
+            return null;
+        }
+    }
+
+    public Integer getPlayerResetCount(String name){
+        try{
+            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerResetCount");
             query.setParameter("name", name);
             int entity = (Integer) query.getSingleResult();
 

@@ -43,6 +43,8 @@
          </font>
       </Text>
       <Button id="previousLvlButton" fx:id="previousLvlButton" layoutX="36.0" layoutY="33.0" mnemonicParsing="false" onAction="#previousLvlButtonClick" text="Previous LVL" />
+      <Button id="nextLvlButton" fx:id="nextLvlButton" layoutX="473.0" layoutY="33.0" mnemonicParsing="false" onAction="#nextLvlButtonClick" text="Next LVL" />
+      <TextField id="yourMoney" fx:id="yourMoney" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="76.0" prefHeight="25.0" prefWidth="117.0" />
 
     </children>
 </AnchorPane>
