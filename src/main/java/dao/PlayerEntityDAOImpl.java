@@ -93,6 +93,24 @@ public class PlayerEntityDAOImpl {
             return null;
         }
     }
+
+    public Integer getPlayerAiDmg(String name){
+        try{
+            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerAiDmg");
+            query.setParameter("name", name);
+            int entity = (Integer) query.getSingleResult();
+
+            return entity;
+        }catch (NoResultException e) {
+            System.out.println("Nem található ilyen Entity");
+            return null;
+        }catch (NullPointerException e) {
+
+            System.out.println("Ilyen Entity nincs az adatbázisban");
+            return null;
+        }
+    }
+
     public Integer getPlayerDmg(String name){
         try{
             Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerDmg");

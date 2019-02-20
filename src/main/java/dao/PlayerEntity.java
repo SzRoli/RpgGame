@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity//emiat entity
-@Table(name = "TABLEA", schema = "MY_OWN_SCHEMA")
+@Table(name = "TABLEB", schema = "MY_OWN_SCHEMA")
 @NamedQueries({
         //valamilyen feltételel lekérdezés, vagy csoportositás stb..
         @NamedQuery(name = "PlayerEntity.findPlayerMoney", query = "SELECT e.money FROM PlayerEntity e where e.name = :name"),
@@ -15,7 +15,8 @@ import java.io.Serializable;
         @NamedQuery(name = "PlayerEntity.findPlayerLvl", query = "SELECT e.lvl FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerCritical", query = "SELECT e.critical FROM PlayerEntity e where e.name = :name"),
         @NamedQuery(name = "PlayerEntity.findPlayerCriticalDmg", query = "SELECT e.criticalDmg FROM PlayerEntity e where e.name = :name"),
-        @NamedQuery(name = "PlayerEntity.findPlayerResetCount", query = "SELECT e.resetCount FROM PlayerEntity e where e.name = :name")
+        @NamedQuery(name = "PlayerEntity.findPlayerResetCount", query = "SELECT e.resetCount FROM PlayerEntity e where e.name = :name"),
+        @NamedQuery(name = "PlayerEntity.findPlayerAiDmg", query = "SELECT e.aiDmg FROM PlayerEntity e where e.name = :name")
 
 })
 
@@ -28,6 +29,9 @@ public class PlayerEntity implements Serializable {
 
     @Column(name = "MONEY")
     private Integer money;
+
+    @Column(name = "AIDMG")
+    private Integer aiDmg;
 
     @Column(name = "DMG")
     private Integer dmg;
@@ -48,7 +52,13 @@ public class PlayerEntity implements Serializable {
     private Integer resetCount;
 
 
+    public Integer getAiDmg() {
+        return aiDmg;
+    }
 
+    public void setAiDmg(Integer aiDmg) {
+        this.aiDmg = aiDmg;
+    }
 
     public Long getId() {
         return Id;
