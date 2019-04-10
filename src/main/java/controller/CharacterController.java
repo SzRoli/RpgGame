@@ -1,9 +1,8 @@
 package controller;
 
 import com.sun.org.apache.xerces.internal.dom.ParentNode;
-import dao.PlayerEntity;
-import dao.PlayerEntityDAOImpl;
 import javafx.animation.FadeTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,26 +19,25 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import modell.GameMaster;
+import modell.Player;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 
 public class CharacterController implements Initializable {
 
-    GameMaster gameMaster = new GameMaster();
-
-    public PlayerEntityDAOImpl playerEntityDAO = PlayerEntityDAOImpl.getPlayerEntityDAOImpl();
-
-    public static PlayerEntity playerEntity = WellcomeSceneController.playerEntityDAO.findPlayerByName(WellcomeSceneController.NAME);
+    Player player = new Player(WellcomeSceneController.NAME);
 
     Random random = new Random();
     int randomNumber;
     double dmgGoldAmount = 5.1;
-    double critChanceGoldAmount = 19.1;
+    double critChanceGoldAmount = 450;
     double critDmgGoldAmount = 11.1;
     double aiDmgGoldAmount = 4.1;
 
@@ -106,64 +104,60 @@ public class CharacterController implements Initializable {
     @FXML
     void critChancePlusButtonClick(ActionEvent event) {
 
-        if((int)(playerEntity.getCritical()*critChanceGoldAmount) <= playerEntity.getMoney()){
-            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getCritical()*critChanceGoldAmount)));
+        player.critPlus(critChanceGoldAmount);
 
-            playerEntity.setCritical(playerEntity.getCritical()+1);
-            setFields();
-            playerEntityDAO.save(playerEntity);
-        }
-        if(playerEntity.getCritical()>=100){
+        setFields();
+
+        if(player.getCritical()>=100){
             critChancePlus.setDisable(true);
         }
     }
 
     @FXML
     void critDmgPlusButtonClick(ActionEvent event) {
-        if((int)(playerEntity.getCriticalDmg()*critDmgGoldAmount) <= playerEntity.getMoney()){
-            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getCriticalDmg()*critDmgGoldAmount)));
-            playerEntity.setCriticalDmg(playerEntity.getCriticalDmg()+1);
-            setFields();
-            playerEntityDAO.save(playerEntity);
-        }
+
+        player.critDmgPlus(critDmgGoldAmount);
+
+        setFields();
+
     }
     @FXML
     void aiDmgPlusButtonClick(ActionEvent event) {
-        if((int)(playerEntity.getAiDmg()*aiDmgGoldAmount) <= playerEntity.getMoney()){
-            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getAiDmg()*aiDmgGoldAmount)));
-            playerEntity.setAiDmg(playerEntity.getAiDmg()+1);
-            setFields();
-            playerEntityDAO.save(playerEntity);
-        }
+
+        player.aiDmgPlus(aiDmgGoldAmount);
+
+        setFields();
+
     }
     @FXML
     void resetButtonClick(ActionEvent event) {
-        if((playerEntity.getResetCount()*100000+100000) <= playerEntity.getMoney()){
-            playerEntity.setResetCount(playerEntity.getResetCount()+1);
-            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getResetCount()*100000+100000)));
-            playerEntity.setCriticalDmg(2);
-            playerEntity.setCritical(8);
-            playerEntity.setLvl(1);
-            playerEntity.setDmg(16);
-            playerEntity.setAiDmg(20);
-            setFields();
-            playerEntityDAO.save(playerEntity);
-            critChancePlus.setDisable(false);
-        }
+
+        player.statReset();
+
+        setFields();
+
+        critChancePlus.setDisable(false);
+
     }
     @FXML
     void PlayButtonClick(ActionEvent event) {
-        if(playerEntity.getMoney() > 0 && playerEntity.getMoney() >= Integer.parseInt(yourMoney.getText()) &&
+        if(player.getMoney() > 0 && player.getMoney() >= Integer.parseInt(yourMoney.getText()) &&
                 number.getText() != null && Integer.parseInt(number.getText()) < 11 && Integer.parseInt(number.getText()) > 0){
-            playerEntity.setMoney(playerEntity.getMoney()-Integer.parseInt(yourMoney.getText()));
+
+            player.setMoney(player.getMoney()-Integer.parseInt(yourMoney.getText()));
+
             randomNumber = random.nextInt(10)+1;
+
             setFields();
+
             if(randomNumber == Integer.parseInt(number.getText())){
-                playerEntity.setMoney(playerEntity.getMoney()+Integer.parseInt(yourMoney.getText()) * 10);
+                player.setMoney(player.getMoney()+Integer.parseInt(yourMoney.getText()) * 10);
+
                 setFields();
-                youGet.setText("You win: " + format(Integer.parseInt(yourMoney.getText()) * 10));
+
+                youGet.setText("You win: " + format(Integer.parseInt(yourMoney.getText()) * 10)+"G");
             }else{
-                youGet.setText("You Lose: " + format(Integer.parseInt(yourMoney.getText())));
+                youGet.setText("You Lose: " + format(Integer.parseInt(yourMoney.getText()))+"G");
             }
         }
 
@@ -174,16 +168,13 @@ public class CharacterController implements Initializable {
 
     @FXML
     void dmgPlusButtonClick(ActionEvent event) {
-        if((int)(playerEntity.getDmg()*dmgGoldAmount) <= playerEntity.getMoney()){
-            playerEntity.setMoney((playerEntity.getMoney()-(int)(playerEntity.getDmg()*dmgGoldAmount)));
 
-            playerEntity.setDmg(playerEntity.getDmg()+1);
-            setFields();
-            playerEntityDAO.save(playerEntity);
-        }
+        player.dmgPlus(dmgGoldAmount);
+
+        setFields();
+
+
     }
-
-
 
     @FXML
     void adventureButtonClick(ActionEvent event)throws IOException {
@@ -191,7 +182,6 @@ public class CharacterController implements Initializable {
 
 
     }
-
     private void makeFadeOut(){
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
@@ -208,6 +198,7 @@ public class CharacterController implements Initializable {
     }
 
     private void loadNextScene(){
+
         try{
             Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Battle.fxml"));
             Scene newGameViewScene = new Scene(newGameViewParent);
@@ -220,36 +211,52 @@ public class CharacterController implements Initializable {
             System.out.println("Nope! "+ex);
         }
 
+
     }
     private String format(int number){
-        int result = number;
+        double result = number;
         if(number/1000>0){
             return ""+result/1000+"k ";
         }
         return ""+result;
     }
     void setFields(){
-        if(playerEntity.getCritical()>=100){
+        if(player.getCritical()>=100){
             critChancePlus.setDisable(true);
         }
-        aiDmgBar.setText(""+format(playerEntity.getAiDmg()));
-        aiDmgBarGold.setText(""+format((int)(playerEntity.getAiDmg()*aiDmgGoldAmount)));
-        nameText.setText(playerEntity.getName());
-        goldAmountField.setText(""+format(playerEntity.getMoney())+"G");
-        dmgBar.setText(""+format(playerEntity.getDmg()));
+        aiDmgBar.setText(""+format(player.getAiDmg()));
+        aiDmgBarGold.setText(""+format((int)(player.getAiDmg()*aiDmgGoldAmount))+"G");
+        nameText.setText(player.getName());
+        goldAmountField.setText(""+format(player.getMoney())+"G");
+        dmgBar.setText(""+format(player.getDmg()));
 
-        critChanceBar.setText(""+format(playerEntity.getCritical()));
-        critDmgBar.setText(""+format(playerEntity.getCriticalDmg()));
+        critChanceBar.setText(""+format(player.getCritical()));
+        critDmgBar.setText(""+format(player.getCriticalDmg()));
 
-        dmgBarGold.setText(""+ format((int)(playerEntity.getDmg() * dmgGoldAmount)) +"G");
-        resetGold.setText(""+format(playerEntity.getResetCount()*100000+100000));
-        critChanceBarGold.setText(""+format((int)(playerEntity.getCritical() * critChanceGoldAmount)));
-        critDmgBarGold.setText(""+format((int)(playerEntity.getCriticalDmg() * critDmgGoldAmount)));
+        dmgBarGold.setText(""+ format((int)(player.getDmg() * dmgGoldAmount)) +"G");
+        resetGold.setText(""+format(player.getResetCount()*100000+100000)+"G");
+        critChanceBarGold.setText(""+format((int)(player.getCritical() * critChanceGoldAmount))+"G");
+        critDmgBarGold.setText(""+format((int)(player.getCriticalDmg() * critDmgGoldAmount))+"G");
+
+        player.save();
     }
 
 
     public void initialize(URL url, ResourceBundle rb){
+        ScheduledExecutorService exec = Executors.newSingleThreadScheduledExecutor();
+        Platform.setImplicitExit(false);
 
+        exec.scheduleAtFixedRate(new Runnable() {
+
+            public void run() {
+                Platform.runLater(new Runnable() {
+                    public void run() {
+                        goldAmountField.setText(""+format(player.getMoney())+"G");
+                    }
+                });
+
+            }
+        }, 0, 500, TimeUnit.MILLISECONDS);
         setFields();
 
 

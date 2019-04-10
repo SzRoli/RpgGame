@@ -19,10 +19,10 @@
                         <Font name="Berlin Sans FB Bold" size="12.0" />
                     </font></TextField>
             </children></Pane>
-        <TextField id="dmgBar" fx:id="dmgBar" editable="false" layoutX="81.0" layoutY="223.0" prefHeight="25.0" prefWidth="42.0" />
-        <Text layoutX="40.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DMG:" />
-        <Button id="dmgPlus" fx:id="dmgPlus" layoutX="181.0" layoutY="222.0" mnemonicParsing="false" onAction="#dmgPlusButtonClick" text="+" />
-        <TextField id="dmgBarGold" fx:id="dmgBarGold" editable="false" layoutX="132.0" layoutY="223.0" prefHeight="25.0" prefWidth="42.0" />
+        <TextField id="dmgBar" fx:id="dmgBar" editable="false" layoutX="66.0" layoutY="223.0" prefHeight="25.0" prefWidth="57.0" />
+        <Text layoutX="31.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DMG:" />
+        <Button id="dmgPlus" fx:id="dmgPlus" layoutX="194.0" layoutY="223.0" mnemonicParsing="false" onAction="#dmgPlusButtonClick" text="+" />
+        <TextField id="dmgBarGold" fx:id="dmgBarGold" editable="false" layoutX="132.0" layoutY="223.0" prefHeight="25.0" prefWidth="57.0" />
         <Button layoutX="491.0" layoutY="200.0" mnemonicParsing="false" onAction="#adventureButtonClick" prefHeight="92.0" prefWidth="95.0" text="Adventure" />
         <Button disable="true" layoutX="387.0" layoutY="200.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="95.0" text="Shop" />
         <TextField id="goldAmountField" fx:id="goldAmountField" editable="false" layoutX="183.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" />
@@ -40,20 +40,20 @@
                 <Text layoutX="19.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Put your money" />
             </children>
         </Pane>
-      <Text layoutX="8.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crit Chance:" />
-      <Text layoutX="22.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CritDMG:" />
-      <TextField id="critChanceBarGold" fx:id="critChanceBarGold" editable="false" layoutX="132.0" layoutY="256.0" prefHeight="25.0" prefWidth="42.0" />
-      <Button id="critChancePlus" fx:id="critChancePlus" layoutX="181.0" layoutY="256.0" mnemonicParsing="false" onAction="#critChancePlusButtonClick" text="+" />
-      <TextField id="critChanceBar" fx:id="critChanceBar" editable="false" layoutX="81.0" layoutY="256.0" prefHeight="25.0" prefWidth="42.0" />
-      <TextField id="critDmgBarGold" fx:id="critDmgBarGold" editable="false" layoutX="132.0" layoutY="291.0" prefHeight="25.0" prefWidth="42.0" />
-      <Button id="critDmgPlus" fx:id="critDmgPlus" layoutX="181.0" layoutY="290.0" mnemonicParsing="false" onAction="#critDmgPlusButtonClick" text="+" />
-      <TextField id="critDmgBar" fx:id="critDmgBar" editable="false" layoutX="81.0" layoutY="291.0" prefHeight="25.0" prefWidth="42.0" />
+      <Text layoutX="-1.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crit Chance:" />
+      <Text layoutX="14.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CritDMG:" />
+      <TextField id="critChanceBarGold" fx:id="critChanceBarGold" editable="false" layoutX="132.0" layoutY="256.0" prefHeight="25.0" prefWidth="57.0" />
+      <Button id="critChancePlus" fx:id="critChancePlus" layoutX="194.0" layoutY="256.0" mnemonicParsing="false" onAction="#critChancePlusButtonClick" text="+" />
+      <TextField id="critChanceBar" fx:id="critChanceBar" editable="false" layoutX="66.0" layoutY="256.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField id="critDmgBarGold" fx:id="critDmgBarGold" editable="false" layoutX="132.0" layoutY="291.0" prefHeight="25.0" prefWidth="57.0" />
+      <Button id="critDmgPlus" fx:id="critDmgPlus" layoutX="194.0" layoutY="291.0" mnemonicParsing="false" onAction="#critDmgPlusButtonClick" text="+" />
+      <TextField id="critDmgBar" fx:id="critDmgBar" editable="false" layoutX="66.0" layoutY="291.0" prefHeight="25.0" prefWidth="57.0" />
       <Button id="resetButton" fx:id="resetButton" layoutX="21.0" layoutY="361.0" mnemonicParsing="false" onAction="#resetButtonClick" text="RESET" />
       <TextField id="resetGold" fx:id="resetGold" layoutX="80.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0" />
           <TextField id="youGet" fx:id="youGet" layoutX="239.0" layoutY="365.0" prefHeight="25.0" prefWidth="122.0" />
-      <TextField id="aiDmgBar" fx:id="aiDmgBar" editable="false" layoutX="81.0" layoutY="324.0" prefHeight="25.0" prefWidth="42.0" />
-      <Button id="aiDmgPlus" fx:id="aiDmgPlus" layoutX="181.0" layoutY="323.0" mnemonicParsing="false" onAction="#aiDmgPlusButtonClick" text="+" />
-      <TextField id="aiDmgBarGold" fx:id="aiDmgBarGold" editable="false" layoutX="132.0" layoutY="324.0" prefHeight="25.0" prefWidth="42.0" />
-      <Text layoutX="22.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AiDmg:" />
+      <TextField id="aiDmgBar" fx:id="aiDmgBar" editable="false" layoutX="66.0" layoutY="324.0" prefHeight="25.0" prefWidth="57.0" />
+      <Button id="aiDmgPlus" fx:id="aiDmgPlus" layoutX="194.0" layoutY="324.0" mnemonicParsing="false" onAction="#aiDmgPlusButtonClick" text="+" />
+      <TextField id="aiDmgBarGold" fx:id="aiDmgBarGold" editable="false" layoutX="132.0" layoutY="324.0" prefHeight="25.0" prefWidth="57.0" />
+      <Text layoutX="18.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AiDmg:" />
     </children>
 </AnchorPane>

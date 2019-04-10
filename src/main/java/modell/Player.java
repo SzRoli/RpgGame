@@ -1,51 +1,112 @@
 package modell;
 
+import dao.PlayerEntity;
+import dao.PlayerEntityDAOImpl;
+
 public class Player {
 
     private String name;
-    private String classe;
-    private String species;
-    private String gender;
     private int dmg;
-    private int def;
-    private int hp;
-    private int doge;
+    private int money;
+    private int lvl;
+    private int aiDmg;
+    private int critical;
+    private int criticalDmg;
+    private int resetCount;
+
+
+
 
     public Player(){
-        this.name = "asdasdasdad";
-        this.classe = "";
-        this.species = "";
-        this.gender = "";
+
+
     }
 
-    public void setParameters(String name,String species, String classe, String gender, int hp, int dmg, int def, int doge){
+    public Player(String name){
 
-        this.name = name;
-        this.species = species;
-        this.classe = classe;
-        this.gender = gender;
-        this.hp = hp;
-        this.dmg = dmg;
-        this.def = def;
-        this.doge = doge;
+        PlayerEntityDAOImpl playerEntityDAO = PlayerEntityDAOImpl.getPlayerEntityDAOImpl();
+
+        PlayerEntity playerEntity = playerEntityDAO.findPlayerByName(name);
+
+        this.name = playerEntity.getName();
+        this.dmg = playerEntity.getDmg();
+        this.money = playerEntity.getMoney();
+        this.lvl = playerEntity.getLvl();
+        this.aiDmg = playerEntity.getAiDmg();
+        this.critical = playerEntity.getCritical();
+        this.criticalDmg = playerEntity.getCriticalDmg();
+        this.resetCount = playerEntity.getResetCount();
+    }
+
+    public void save (){
+
+        PlayerEntityDAOImpl playerEntityDAO = PlayerEntityDAOImpl.getPlayerEntityDAOImpl();
+
+        PlayerEntity playerEntity = playerEntityDAO.findPlayerByName(name);
+
+        playerEntity.setName(this.name);
+        playerEntity.setDmg(this.dmg);
+        playerEntity.setMoney(this.money);
+        playerEntity.setLvl(this.lvl);
+        playerEntity.setAiDmg(this.aiDmg);
+        playerEntity.setCritical(this.critical);
+        playerEntity.setCriticalDmg(this.criticalDmg);
+        playerEntity.setResetCount(this.resetCount);
+
+        playerEntityDAO.save(playerEntity);
+
+    }
+
+    public void critPlus(double critChanceGoldAmount){
+        if((int)(getCritical()*critChanceGoldAmount) <= getMoney()){
+            setMoney((getMoney()-(int)(getCritical()*critChanceGoldAmount)));
+
+            setCritical(getCritical()+1);
+        }
+    }
+
+    public void critDmgPlus(double critDmgGoldAmount){
+        if((int)(getCriticalDmg()*critDmgGoldAmount) <= getMoney()){
+            setMoney((getMoney()-(int)(getCriticalDmg()*critDmgGoldAmount)));
+            setCriticalDmg(getCriticalDmg()+1);
+
+        }
+    }
+
+    public void aiDmgPlus(double aiDmgGoldAmount){
+        if((int)(getAiDmg()*aiDmgGoldAmount) <= getMoney()){
+            setMoney((getMoney()-(int)(getAiDmg()*aiDmgGoldAmount)));setAiDmg(getAiDmg()+1);
+        }
+    }
+
+    public void statReset(){
+        if((getResetCount()*100000+100000) <= getMoney()){
+            setResetCount(getResetCount()+1);
+            setMoney(0);
+            setCriticalDmg(2);
+            setCritical(8);
+            setLvl(1);
+            setDmg(16);
+            setAiDmg(20);
+
+
+        }
+    }
+
+    public void dmgPlus(double dmgGoldAmount) {
+        if ((int) (getDmg() * dmgGoldAmount) <= getMoney()) {
+            setMoney((getMoney() - (int) (getDmg() * dmgGoldAmount)));
+
+            setDmg(getDmg() + 1);
+        }
     }
 
     public String getName() {
         return name;
     }
-
-    public String getClasse() {
-        return classe;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public String getSpecies() {
-        return species;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
     public int getDmg() {
         return dmg;
     }
@@ -54,27 +115,51 @@ public class Player {
         this.dmg = dmg;
     }
 
-    public int getDef() {
-        return def;
+    public int getMoney() {
+        return money;
     }
 
-    public void setDef(int def) {
-        this.def = def;
+    public void setMoney(int money) {
+        this.money = money;
     }
 
-    public int getHp() {
-        return hp;
+    public int getLvl() {
+        return lvl;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
     }
 
-    public int getDoge() {
-        return doge;
+    public int getAiDmg() {
+        return aiDmg;
     }
 
-    public void setDoge(int doge) {
-        this.doge = doge;
+    public void setAiDmg(int aiDmg) {
+        this.aiDmg = aiDmg;
+    }
+
+    public int getCritical() {
+        return critical;
+    }
+
+    public void setCritical(int critical) {
+        this.critical = critical;
+    }
+
+    public int getCriticalDmg() {
+        return criticalDmg;
+    }
+
+    public void setCriticalDmg(int criticalDmg) {
+        this.criticalDmg = criticalDmg;
+    }
+
+    public int getResetCount() {
+        return resetCount;
+    }
+
+    public void setResetCount(int resetCount) {
+        this.resetCount = resetCount;
     }
 }

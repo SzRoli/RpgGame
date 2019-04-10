@@ -16,7 +16,7 @@
                 <Button id="gameButton" fx:id="gameButton" layoutX="74.0" layoutY="175.0" mnemonicParsing="false" onAction="#GameButtonClick" text="Game" />
               <Button id="quitButton" fx:id="quitButton" layoutX="78.0" layoutY="265.0" mnemonicParsing="false" onAction="#QuitClick" text="Quit" />
               <Button disable="true" layoutX="69.0" layoutY="215.0" mnemonicParsing="false" text="Options" />
-            <TextField id="nameField" fx:id="nameField" layoutX="117.0" layoutY="141.0" prefHeight="25.0" prefWidth="115.0" />
+            <TextField id="nameField" fx:id="nameField" layoutX="117.0" layoutY="141.0" onAction="#GameButtonClick" prefHeight="25.0" prefWidth="115.0" />
             <Text layoutX="33.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YourName:" />
             </children>
         </Pane>

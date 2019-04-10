@@ -1,7 +1,4 @@
 package controller;
-
-import dao.PlayerEntity;
-import dao.PlayerEntityDAOImpl;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -9,65 +6,50 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Cursor;
-import javafx.scene.Node;
+
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextArea;
+
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.media.AudioClip;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Path;
+
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import modell.GameMaster;
-import org.apache.derby.impl.sql.CursorInfo;
-import sun.font.TextLabel;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import java.awt.*;
-import java.io.File;
+import modell.Enemy;
+import modell.Player;
+
 import java.io.IOException;
 import java.net.URL;
+
 import java.util.Random;
 import java.util.ResourceBundle;
-import java.util.Timer;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class BattleController implements Initializable{
 
-    private GameMaster gameMaster = new GameMaster();
+
+    Player player = new Player(WellcomeSceneController.NAME);
+    Enemy enemy = new Enemy();
 
 
-    public PlayerEntityDAOImpl playerEntityDAO = PlayerEntityDAOImpl.getPlayerEntityDAOImpl();
-
-    public static PlayerEntity playerEntity = WellcomeSceneController.playerEntityDAO.findPlayerByName(WellcomeSceneController.NAME);
-
-
+    ScheduledExecutorService exec = Executors.newSingleThreadScheduledExecutor();
     Random random = new Random();
-    int dmg = playerEntity.getDmg();
-    int currentHp;
+
     double opaci = 1.0;
-    int lvl = playerEntity.getLvl();
-    int enemyHp;
-    int yourDmg;
-    int yourMaxHp = currentHp;
-    int enemyMaxHp = enemyHp;
+
 
     private static final String MEDIA_URL =
             "http://download.oracle.com/otndocs/products/javafx/oow2010-2.flv";
@@ -111,37 +93,55 @@ public class BattleController implements Initializable{
 
     @FXML
     void previousLvlButtonClick(ActionEvent event) {
-        if(lvl>=2){
-            opaci=1.0;
-            hpBar.setProgress(opaci);
-            enemyMaxHp-=400;
-            enemyHp = enemyMaxHp;
-            enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
-            lvl--;
-            lvlText.setText(""+lvl);
+
+        if(enemy.getLvl()>=2){
+                opaci=1.0;
+                hpBar.setProgress(opaci);
+                enemy.setMaxHp(enemy.getMaxHp()-400);
+                //enemyMaxHp-=400;
+                enemy.setHp(enemy.getMaxHp());
+                //enemyHp = enemyMaxHp;
+                enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
+                enemy.setLvl(enemy.getLvl()-1);
+                //lvl--;
+                lvlText.setText(""+enemy.getLvl());
 
         }
     }
 
     @FXML
     void nextLvlButtonClick(ActionEvent event) {
-        if(lvl<playerEntity.getLvl()){
-            opaci=1.0;
-            hpBar.setProgress(opaci);
-            enemyMaxHp+=400;
-            enemyHp = enemyMaxHp;
-            enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
-            lvl++;
-            lvlText.setText(""+lvl);
-        }
+
+                if (enemy.getLvl() < player.getLvl()) {
+
+                        opaci = 1.0;
+                        hpBar.setProgress(opaci);
+                        enemy.setMaxHp(enemy.getMaxHp() + 400);
+                        //enemyMaxHp+=400;
+                        enemy.setHp(enemy.getMaxHp());
+                        //enemyHp = enemyMaxHp;
+                        enemyHpText.setText("" + format(enemy.getHp()) + " / " + format(enemy.getMaxHp()));
+                        //lvl++;
+                        enemy.setLvl(enemy.getLvl()+1);
+                        lvlText.setText("" + enemy.getLvl());
+
+                }
+
     }
 
 
     @FXML
     void backButtonClick(ActionEvent event) throws IOException {
         makeFadeTrans(1,0);
+        try{
+            exec.shutdown();
+        }catch(Exception e){
+            System.out.println(e);
+        }
+
 
     }
+
     private void loadNextScene(){
         try{
             Parent newGameViewParent = FXMLLoader.load(getClass().getResource("/fxml/Character.fxml"));
@@ -159,12 +159,13 @@ public class BattleController implements Initializable{
     void winCheck(int currentHp){
 
         if(currentHp <= 0){
-            if(playerEntity.getResetCount()>0){
-                playerEntity.setMoney((int)(playerEntity.getMoney()+(50*((double)lvl/2))*playerEntity.getResetCount()));
+
+            if(player.getResetCount()>0){
+                player.setMoney((int)(player.getMoney()+(50*((double)enemy.getLvl()/2))*(player.getResetCount()+1)));
             }else{
-                playerEntity.setMoney((int)(playerEntity.getMoney()+(50*((double)lvl/2))));
+                player.setMoney((int)(player.getMoney()+(50*((double)enemy.getLvl()/2))));
             }
-            if(lvl!=playerEntity.getLvl()){
+            if(enemy.getLvl()!=player.getLvl()){
                 try{
                     int random = (int )(Math.random() * 3 + 1);
 
@@ -176,8 +177,8 @@ public class BattleController implements Initializable{
                     System.out.println("Could open the image file!: "+e);
                 }
 
-                enemyHp = enemyMaxHp;
-                enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
+                enemy.setHp(enemy.getMaxHp());
+                enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
             }else{
                 try{
                     int random = (int )(Math.random() * 3 + 1);
@@ -189,94 +190,89 @@ public class BattleController implements Initializable{
                 }catch(Exception e){
                     System.out.println("Could open the image file!: "+e);
                 }
-                enemyHp = enemyMaxHp + 400;
-                enemyMaxHp = enemyHp;
-                enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
-                lvl++;
-                if(lvl>playerEntity.getLvl()){
-                    playerEntity.setLvl(lvl);
+                enemy.setHp(enemy.getMaxHp()+400);
+                enemy.setMaxHp(enemy.getHp());
+                enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
+                enemy.setLvl(enemy.getLvl()+1);
+                if(enemy.getLvl()>player.getLvl()){
+                    player.setLvl(enemy.getLvl());
                 }
-                lvlText.setText(""+lvl);
+                lvlText.setText(""+enemy.getLvl());
             }
 
-            yourMoney.setText(""+playerEntity.getMoney()+"G");
-            if((double)enemyHp/enemyMaxHp>0){
-                opaci = (double)enemyHp/enemyMaxHp;
+            yourMoney.setText(""+format(player.getMoney())+"G");
+            if((double)enemy.getHp()/enemy.getMaxHp()>0){
+                opaci = (double)enemy.getHp()/enemy.getMaxHp();
             }else{
                 opaci = 0;
             }
             hpBar.setProgress(opaci);
-            playerEntityDAO.save(playerEntity);
+            player.save();
+
         }
     }
+
+    private void bossTimer(){
+
+        System.out.println("boss: "+30+" s");
+
+    }
+
+    private String format(int number){
+        double result = number;
+        if(number/1000>0){
+            return ""+result/1000+"k ";
+        }
+        return ""+result;
+    }
+
     void attack() {
 
 
-            if(random.nextInt(100) <= playerEntity.getCritical()){
-                enemyHp -= yourDmg*playerEntity.getCriticalDmg();
-                if((double)enemyHp/enemyMaxHp>0){
-                    opaci = (double)enemyHp/enemyMaxHp;
+            if(random.nextInt(100) <= player.getCritical()){
+                enemy.setHp(enemy.getHp()-player.getDmg()*player.getCriticalDmg());
+                if((double)enemy.getHp()/enemy.getMaxHp()>0){
+                    opaci = (double)enemy.getHp()/enemy.getMaxHp();
                 }else{
                     opaci = 0;
                 }
                 dmgText.setOpacity(0);
                 dmgText.setFont(Font.font(42));
                 dmgText.setFill(Color.ORANGE);
-                //Point mouse = MouseInfo.getPointerInfo().getLocation();
-                //System.out.println(mouse);
-                //dmgText.setLayoutX(mouse.x);
-                //dmgText.setLayoutY(mouse.y);
 
-                dmgText.setText(""+yourDmg*playerEntity.getCriticalDmg()+" Hit");
+                dmgText.setText(""+format(player.getDmg()*player.getCriticalDmg())+" Hit");
 
                 makeFadeTrandText();
             }else{
-                enemyHp -= yourDmg;
-                if((double)enemyHp/enemyMaxHp>0){
-                    opaci = (double)enemyHp/enemyMaxHp;
+                enemy.setHp(enemy.getHp()-player.getDmg());
+                if((double)enemy.getHp()/enemy.getMaxHp()>0){
+                    opaci = (double)enemy.getHp()/enemy.getMaxHp();
                 }else{
                     opaci = 0;
                 }
                 dmgText.setOpacity(0);
                 dmgText.setFill(Color.RED);
                 dmgText.setFont(Font.font(32));
-                //Point mouse = MouseInfo.getPointerInfo().getLocation();
-                //System.out.println(rootPane.getHeight() + "" + rootPane.getWidth());
-                //dmgText.setLayoutX(rootPane.getWidth()+10);
-                //dmgText.setLayoutY(rootPane.getHeight()-10);
 
-                dmgText.setText(""+yourDmg+" Hit");
+                dmgText.setText(""+format(player.getDmg())+" Hit");
 
 
                 makeFadeTrandText();
             }
 
-            opaci = (double)enemyHp/enemyMaxHp;
+            opaci = (double)enemy.getHp()/enemy.getMaxHp();
             hpBar.setProgress(opaci);
 
+            enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
 
-
-            if(enemyMaxHp/1000>0){
-                if(enemyHp/1000 > 0){
-                    enemyHpText.setText(""+(double)enemyHp/1000+"K / "+(double)enemyMaxHp/1000+"K");
-                }else{
-                    enemyHpText.setText(""+enemyHp+" / "+(double)enemyMaxHp/1000+"K");
-                }
-            }else{
-                enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
-            }
-
-
-
-            winCheck(enemyHp);
-
+            winCheck(enemy.getHp());
 
     }
     void AiAttack(){
 
-        enemyHp -= playerEntity.getAiDmg();
-        if((double)enemyHp/enemyMaxHp>0){
-            opaci = (double)enemyHp/enemyMaxHp;
+        enemy.setHp(enemy.getHp()-player.getAiDmg());
+        if((double)enemy.getHp()/enemy.getMaxHp()>0){
+            opaci = (double)enemy.getHp()/enemy.getMaxHp();
         }else{
             opaci = 0;
         }
@@ -289,23 +285,15 @@ public class BattleController implements Initializable{
         dmgText.setFont(Font.font(42));
         dmgText.setFill(Color.BLUE);
 
-        dmgText.setText(""+playerEntity.getAiDmg()+" Hit");
+        dmgText.setText(""+format(player.getAiDmg())+" Hit");
 
         makeFadeTrandText();
 
 
 
-        if(enemyMaxHp/1000>0){
-            if(enemyHp/1000 > 0){
-                enemyHpText.setText(""+(double)enemyHp/1000+"K / "+(double)enemyMaxHp/1000+"K");
-            }else{
-                enemyHpText.setText(""+enemyHp+" / "+(double)enemyMaxHp/1000+"K");
-            }
-        }else{
-            enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
-        }
+        enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
 
-        winCheck(enemyHp);
+        winCheck(enemy.getHp());
     }
     private void makeFadeTrans(int start, int end){
         FadeTransition fadeTransition = new FadeTransition();
@@ -331,7 +319,7 @@ public class BattleController implements Initializable{
         fadeTransition.play();
     }
     public void initialize(URL url, ResourceBundle rb){
-        ScheduledExecutorService exec = Executors.newSingleThreadScheduledExecutor();
+        enemy.setLvl(player.getLvl());
         Platform.setImplicitExit(false);
 
         exec.scheduleAtFixedRate(new Runnable() {
@@ -344,17 +332,15 @@ public class BattleController implements Initializable{
                 });
 
             }
-        }, 0, 500, TimeUnit.MILLISECONDS);
+        }, 0, 500,  TimeUnit.MILLISECONDS);
 
         makeFadeTrans(0,1);
-        lvlText.setText(""+lvl);
-        yourMoney.setText(""+playerEntity.getMoney()+"G");
-        enemyHp = 400 * lvl;
-        enemyMaxHp=enemyHp;
+        lvlText.setText(""+enemy.getLvl());
+        yourMoney.setText(""+format(player.getMoney())+"G");
+        enemy.setHp(enemy.getLvl()*400);
+        enemy.setMaxHp(enemy.getHp());
 
-        yourDmg = playerEntity.getDmg();
-
-        enemyHpText.setText(""+enemyHp+" / "+enemyMaxHp);
+        enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
 
 
     }

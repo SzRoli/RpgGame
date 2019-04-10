@@ -8,12 +8,15 @@ import javafx.scene.Scene;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 
 
 public class MainApp extends Application {
 
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DBManager.class.getName());
 
     private static final DBManager DB_MANAGER = DBManager.getDpInstance();
 
@@ -36,7 +39,7 @@ public class MainApp extends Application {
 
             launch(args);
         }catch (Exception e){
-            System.out.println("Connection error..");
+            LOGGER.error("Connection error..");
         }finally{
             DB_MANAGER.disconnectDB();
         }
