@@ -75,7 +75,8 @@ public class Player {
 
     public void aiDmgPlus(double aiDmgGoldAmount){
         if((int)(getAiDmg()*aiDmgGoldAmount) <= getMoney()){
-            setMoney((getMoney()-(int)(getAiDmg()*aiDmgGoldAmount)));setAiDmg(getAiDmg()+1);
+            setMoney((getMoney()-(int)(getAiDmg()*aiDmgGoldAmount)));
+            setAiDmg(getAiDmg()+1);
         }
     }
 
