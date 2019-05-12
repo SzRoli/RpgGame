@@ -24,9 +24,7 @@ public class Enemy {
     /**
      * The constructor of the Enemy class.
      */
-    public Enemy(){
-
-    }
+    public Enemy() { }
 
     /**
      * Method to get back the enemy's lvl.
@@ -40,9 +38,7 @@ public class Enemy {
      * Setter method for lvl.
      * @param lvl value of setting.
      */
-    public void setLvl(int lvl) {
-        this.lvl = lvl;
-    }
+    public void setLvl(  int lvl) { this.lvl = lvl; }
 
     /**
      * Method to get back the gold value what you will get.

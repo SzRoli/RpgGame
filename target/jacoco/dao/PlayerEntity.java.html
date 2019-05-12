@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PlayerEntity.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">game</a> &gt; <a href="index.source.html" class="el_package">dao</a> &gt; <span class="el_source">PlayerEntity.java</span></div><h1>PlayerEntity.java</h1><pre class="source lang-java linenums">package dao;
+
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity//emiat entity
+@Table(name = &quot;TABLEB&quot;, schema = &quot;MY_OWN_SCHEMA&quot;)
+@NamedQueries({
+        //valamilyen feltételel lekérdezés, vagy csoportositás stb..
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerMoney&quot;, query = &quot;SELECT e.money FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerByName&quot;, query = &quot;SELECT e FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerName&quot;, query = &quot;SELECT e.name FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerDmg&quot;, query = &quot;SELECT e.dmg FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerLvl&quot;, query = &quot;SELECT e.lvl FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerCritical&quot;, query = &quot;SELECT e.critical FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerCriticalDmg&quot;, query = &quot;SELECT e.criticalDmg FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerResetCount&quot;, query = &quot;SELECT e.resetCount FROM PlayerEntity e where e.name = :name&quot;),
+        @NamedQuery(name = &quot;PlayerEntity.findPlayerAiDmg&quot;, query = &quot;SELECT e.aiDmg FROM PlayerEntity e where e.name = :name&quot;)
+
+})
+
+<span class="nc" id="L23">public class PlayerEntity implements Serializable {</span>
+
+    @Id
+    @GeneratedValue
+    @Column(name = &quot;Id&quot;, nullable = false, updatable = false)
+    private Long Id;
+
+    @Column(name = &quot;MONEY&quot;)
+    private Integer money;
+
+    @Column(name = &quot;AIDMG&quot;)
+    private Integer aiDmg;
+
+    @Column(name = &quot;DMG&quot;)
+    private Integer dmg;
+
+    @Column(name = &quot;NAME&quot;, unique = true, nullable = false)
+    private String name;
+
+    @Column(name = &quot;LVL&quot;)
+    private Integer lvl;
+
+    @Column (name = &quot;CRITICAL&quot;)
+    private Integer critical;
+
+    @Column (name = &quot;CRITICALDMG&quot;)
+    private Integer criticalDmg;
+
+    @Column (name = &quot;RESETCOUNT&quot;)
+    private Integer resetCount;
+
+
+    public Integer getAiDmg() {
+<span class="nc" id="L56">        return aiDmg;</span>
+    }
+
+    public void setAiDmg(Integer aiDmg) {
+<span class="nc" id="L60">        this.aiDmg = aiDmg;</span>
+<span class="nc" id="L61">    }</span>
+
+    public Long getId() {
+<span class="nc" id="L64">        return Id;</span>
+    }
+
+    public void setMoney(Integer amount) {
+<span class="nc" id="L68">        this.money = amount;</span>
+<span class="nc" id="L69">    }</span>
+
+
+    public Integer getMoney(){
+<span class="nc" id="L73">        return this.money;</span>
+    }
+
+<span class="nc" id="L76">    public String getName(){ return this.name; }</span>
+
+<span class="nc" id="L78">    public void setName(String name) { this.name = name; }</span>
+
+<span class="nc" id="L80">    public Integer getLvl(){ return this.lvl; }</span>
+
+<span class="nc" id="L82">    public void setLvl(Integer lvl) { this.lvl = lvl; }</span>
+
+
+    public Integer getDmg() {
+<span class="nc" id="L86">        return dmg;</span>
+    }
+
+    public void setDmg(Integer dmg) {
+<span class="nc" id="L90">        this.dmg = dmg;</span>
+<span class="nc" id="L91">    }</span>
+
+    public Integer getCritical() {
+<span class="nc" id="L94">        return this.critical;</span>
+    }
+
+    public void setCritical(Integer critical) {
+<span class="nc" id="L98">        this.critical = critical;</span>
+<span class="nc" id="L99">    }</span>
+
+    public Integer getCriticalDmg() {
+<span class="nc" id="L102">        return this.criticalDmg;</span>
+    }
+
+    public void setCriticalDmg(Integer criticalDmg) {
+<span class="nc" id="L106">        this.criticalDmg = criticalDmg;</span>
+<span class="nc" id="L107">    }</span>
+
+    public Integer getResetCount() {
+<span class="nc" id="L110">        return this.resetCount;</span>
+    }
+
+    public void setResetCount(Integer resetCount) {
+<span class="nc" id="L114">        this.resetCount = resetCount;</span>
+<span class="nc" id="L115">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

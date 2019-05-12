@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed May 08 08:23:32 CEST 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-016a-961c-84cc-0000053a1800 
-on database directory D:\programok\JavaBeadando\RpgGame\RPGDB with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Sun May 12 12:01:12 CEST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-016a-ab7d-3c80-000008a354a8 
+on database directory D:\programok\JavaBeadando\RpgGame\RPGDB with class loader java.net.URLClassLoader@19f3c9ba 
 Loaded from file:/C:/Users/admin/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_201-b09

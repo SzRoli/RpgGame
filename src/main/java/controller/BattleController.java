@@ -170,8 +170,9 @@ public class BattleController implements Initializable{
                     int random = (int )(Math.random() * 3 + 1);
 
                     System.out.println("Images/Mob"+random+".png");
-                    Image image = new Image("Images/Mob"+random+".png");
+                    Image image = new Image(getClass().getResource("/Images/Mob"+random+".png").toExternalForm());
 
+                    //mobImage.setImage(image);
                     mobImage.setImage(image);
                 }catch(Exception e){
                     System.out.println("Could open the image file!: "+e);
@@ -183,10 +184,14 @@ public class BattleController implements Initializable{
                 try{
                     int random = (int )(Math.random() * 3 + 1);
 
-                    System.out.println("Images/Mob"+random+".png");
-                    Image image = new Image("Images/Mob"+random+".png");
-
+                    /*System.out.println("Images/Mob"+random+".png");
+                    Image image = new Image("Images/Mob"+random+".png");*/
+                    //mobImage.setImage(image);
+                    Image image = new Image(getClass().getResource("/Images/Mob"+random+".png").toExternalForm());
                     mobImage.setImage(image);
+
+
+                    //mobImage.setImage(new Image(getClass().getResource("Images/Mob"+random+".png").toExternalForm()));
                 }catch(Exception e){
                     System.out.println("Could open the image file!: "+e);
                 }

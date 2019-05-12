@@ -1,19 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdb13aa8-0bfe-4b1a-9325-d86a32806ae1" name="Default Changelist" comment="add crit chance, crit dmg and reset button">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="bdb13aa8-0bfe-4b1a-9325-d86a32806ae1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGDB/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGDB/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGDB/log/log2.dat" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/log/log2.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPGDB/seg0/c570.dat" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/seg0/c570.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BattleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modell/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modell/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modell/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modell/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-checker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-checker.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/WellcomeSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/WellcomeSceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DBManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/PlayerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/PlayerEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/PlayerEntityDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/PlayerEntityDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/modell/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modell/Enemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modell/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modell/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/MainApp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/class-use/MainApp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/BattleController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/CharacterController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/WellcomeSceneController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/class-use/BattleController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/class-use/CharacterController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/class-use/WellcomeSceneController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/DBManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/PlayerEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/PlayerEntityDAOImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/class-use/DBManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/class-use/PlayerEntity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/class-use/PlayerEntityDAOImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/Enemy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/Player.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/class-use/Enemy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/class-use/Player.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/checkstyle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.rss" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/checkstyle.rss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/modell/EnemyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modell/EnemyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/modell/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modell/PlayerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,22 +102,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/BattleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="661">
-              <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+            <state relative-caret-position="1615">
+              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modell/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="83" column="58" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
+            <state relative-caret-position="765">
+              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,26 +128,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modell/Enemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+            <state relative-caret-position="1190">
+              <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkstyle.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            <state relative-caret-position="2900">
+              <caret line="194" column="29" selection-start-line="194" selection-start-column="29" selection-end-line="194" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -94,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/modell/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state relative-caret-position="646">
+              <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/modell/EnemyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="357">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,7 +167,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/app/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -123,6 +175,36 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/package-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkstyle.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -156,6 +238,9 @@
       <find>enemy = new</find>
       <find>yourDmg</find>
       <find>enemyHp</find>
+      <find>Image</find>
+      <find>build</find>
+      <find>juni</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,18 +269,18 @@
         <option value="$PROJECT_DIR$/src/main/java/app/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/modell/Ai.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/WellcomeSceneController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/BattleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/package-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/package-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/package-info.java" />
-        <option value="$PROJECT_DIR$/src/main/java/modell/Enemy.java" />
         <option value="$PROJECT_DIR$/src/main/java/modell/package-info.java" />
+        <option value="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/BattleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/modell/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/modell/Player.java" />
         <option value="$PROJECT_DIR$/checkstyle.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/modell/Player.java" />
-        <option value="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" />
       </list>
     </option>
   </component>
@@ -207,7 +292,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="793" />
+    <option name="x" value="196" />
+    <option name="y" value="-21" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -288,22 +374,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RpgGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RpgGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RpgGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RpgGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -343,7 +413,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557297037207" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557400985263" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -498,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550590371576</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add tests">
+      <created>1557297009786</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557297009786</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -543,10 +620,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="828" y="196" width="814" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.19987147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.433687" />
       <window_info id="Structure" order="1" sideWeight="0.50101835" side_tool="true" weight="0.19730078" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -556,14 +633,14 @@
       <window_info id="DB Browser" order="7" weight="0.33333334" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3270525" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33916554" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34332424" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32974428" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32974428" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.19650067" />
       <window_info anchor="bottom" id="DB Execution Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -608,7 +685,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add crit chance, crit dmg and reset button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add crit chance, crit dmg and reset button" />
+    <MESSAGE value="add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence" />
@@ -709,21 +787,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modell/GameMaster.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -758,51 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Enemy.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BattleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkstyle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/modell/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/modell/EnemyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="83" column="58" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
+        <state relative-caret-position="2550">
+          <caret line="189" column="69" selection-start-line="189" selection-start-column="69" selection-end-line="189" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -811,18 +834,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+        <state relative-caret-position="1615">
+          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BattleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="118" column="36" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+        <state relative-caret-position="765">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/modell/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/modell/EnemyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -836,6 +886,37 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkstyle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2900">
+          <caret line="194" column="29" selection-start-line="194" selection-start-column="29" selection-end-line="194" selection-end-column="29" />
         </state>
       </provider>
     </entry>

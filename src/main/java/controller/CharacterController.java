@@ -112,7 +112,6 @@ public class CharacterController implements Initializable {
             critChancePlus.setDisable(true);
         }
     }
-
     @FXML
     void critDmgPlusButtonClick(ActionEvent event) {
 
