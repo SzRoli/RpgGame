@@ -44,7 +44,7 @@ public class Player {
     /**
      * The constructor of the Player class.
      */
-<span class="nc" id="L47">    public Player() { }</span>
+<span class="fc" id="L47">    public Player() { }</span>
 
     /**
      * The constructor of the Player class with a name string input.
@@ -89,155 +89,158 @@ public class Player {
 <span class="nc" id="L89">    }</span>
 
     /**
-     * Critical plus method to plus the player's critical
+     * Critical plus method to plus the player's critical.
      * @param critChanceGoldAmount of settings
      */
     public void critPlus(double critChanceGoldAmount) {
-<span class="nc bnc" id="L96" title="All 2 branches missed.">        if((int)(getCritical()*critChanceGoldAmount) &lt;= getMoney()){</span>
-<span class="nc" id="L97">            setMoney((getMoney()-(int)(getCritical()*critChanceGoldAmount)));</span>
+<span class="fc bfc" id="L96" title="All 2 branches covered.">        if((int)(getCritical()*critChanceGoldAmount) &lt;= getMoney()){</span>
+<span class="fc" id="L97">            setMoney((getMoney()-(int)(getCritical()*critChanceGoldAmount)));</span>
 
-<span class="nc" id="L99">            setCritical(getCritical()+1);</span>
+<span class="fc" id="L99">            setCritical(getCritical()+1);</span>
         }
-<span class="nc" id="L101">    }</span>
+<span class="fc" id="L101">    }</span>
     /**
-     * Critical Damage plus method to plus player's critical damage
+     * Critical Damage plus method to plus player's critical damage.
+     * @param critDmgGoldAmount of settings
      */
     public void critDmgPlus(double critDmgGoldAmount)
     {
-<span class="nc bnc" id="L107" title="All 2 branches missed.">        if((int)(getCriticalDmg()*critDmgGoldAmount) &lt;= getMoney()){</span>
-<span class="nc" id="L108">            setMoney((getMoney()-(int)(getCriticalDmg()*critDmgGoldAmount)));</span>
-<span class="nc" id="L109">            setCriticalDmg(getCriticalDmg()+1);</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">        if((int)(getCriticalDmg()*critDmgGoldAmount) &lt;= getMoney()){</span>
+<span class="fc" id="L109">            setMoney((getMoney()-(int)(getCriticalDmg()*critDmgGoldAmount)));</span>
+<span class="fc" id="L110">            setCriticalDmg(getCriticalDmg()+1);</span>
 
         }
-<span class="nc" id="L112">    }</span>
+<span class="fc" id="L113">    }</span>
     /**
-     * Ai damage plus method to plus the player's ai damage
+     * Ai damage plus method to plus the player's ai damage.
+     * @param aiDmgGoldAmount of settings
      */
     public void aiDmgPlus(double aiDmgGoldAmount)
     {
-<span class="nc bnc" id="L118" title="All 2 branches missed.">        if((int)(getAiDmg()*aiDmgGoldAmount) &lt;= getMoney()){</span>
-<span class="nc" id="L119">            setMoney((getMoney()-(int)(getAiDmg()*aiDmgGoldAmount)));</span>
-<span class="nc" id="L120">            setAiDmg(getAiDmg()+1);</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        if((int)(getAiDmg()*aiDmgGoldAmount) &lt;= getMoney()){</span>
+<span class="fc" id="L121">            setMoney((getMoney()-(int)(getAiDmg()*aiDmgGoldAmount)));</span>
+<span class="fc" id="L122">            setAiDmg(getAiDmg()+1);</span>
         }
-<span class="nc" id="L122">    }</span>
+<span class="fc" id="L124">    }</span>
     /**
      * Stat reset count method to reset the player's stat and give the players some boost.
      */
     public void statReset()
     {
-<span class="nc bnc" id="L128" title="All 2 branches missed.">        if((getResetCount()*100000+100000) &lt;= getMoney()){</span>
-<span class="nc" id="L129">            setResetCount(getResetCount()+1);</span>
-<span class="nc" id="L130">            setMoney(0);</span>
-<span class="nc" id="L131">            setCriticalDmg(2);</span>
-<span class="nc" id="L132">            setCritical(8);</span>
-<span class="nc" id="L133">            setLvl(1);</span>
-<span class="nc" id="L134">            setDmg(16);</span>
-<span class="nc" id="L135">            setAiDmg(20);</span>
+<span class="pc bpc" id="L130" title="1 of 2 branches missed.">        if((getResetCount()*100000+100000) &lt;= getMoney()){</span>
+<span class="fc" id="L131">            setResetCount(getResetCount()+1);</span>
+<span class="fc" id="L132">            setMoney(0);</span>
+<span class="fc" id="L133">            setCriticalDmg(2);</span>
+<span class="fc" id="L134">            setCritical(8);</span>
+<span class="fc" id="L135">            setLvl(1);</span>
+<span class="fc" id="L136">            setDmg(16);</span>
+<span class="fc" id="L137">            setAiDmg(20);</span>
 
 
         }
-<span class="nc" id="L139">    }</span>
+<span class="fc" id="L141">    }</span>
     /**
      * Damage plus method to plus Player's Damage.
+     * @param dmgGoldAmount of settings
      */
     public void dmgPlus(double dmgGoldAmount)
     {
-<span class="nc bnc" id="L145" title="All 2 branches missed.">        if ((int) (getDmg() * dmgGoldAmount) &lt;= getMoney()) {</span>
-<span class="nc" id="L146">            setMoney((getMoney() - (int) (getDmg() * dmgGoldAmount)));</span>
+<span class="fc bfc" id="L148" title="All 2 branches covered.">        if ((int) (getDmg() * dmgGoldAmount) &lt;= getMoney()) {</span>
+<span class="fc" id="L149">            setMoney((getMoney() - (int) (getDmg() * dmgGoldAmount)));</span>
 
-<span class="nc" id="L148">            setDmg(getDmg() + 1);</span>
+<span class="fc" id="L151">            setDmg(getDmg() + 1);</span>
         }
-<span class="nc" id="L150">    }</span>
+<span class="fc" id="L153">    }</span>
 
     /**
      * Method to get back the player's name.
      * @return string of name
      */
     public String getName() {
-<span class="nc" id="L157">        return name;</span>
+<span class="fc" id="L160">        return name;</span>
     }
 
     /**
      * Setter method for name.
      * @param name string of settings
      */
-<span class="nc" id="L164">    public void setName(String name) { this.name = name; }</span>
+<span class="fc" id="L167">    public void setName(String name) { this.name = name; }</span>
     /**
      * Method to get back the player's damage.
      * @return number of damage
      */
-<span class="nc" id="L169">    public int getDmg() { return dmg; }</span>
+<span class="fc" id="L172">    public int getDmg() { return dmg; }</span>
 
     /**
-     * Setter method for damage
-     * @param dmg
+     * Setter method for damage.
+     * @param dmg of settings
      */
-<span class="nc" id="L175">    public void setDmg(int dmg) { this.dmg = dmg; }</span>
+<span class="fc" id="L178">    public void setDmg(int dmg) { this.dmg = dmg; }</span>
     /**
      * Method to get back the player's Money.
      * @return number of money
      */
-<span class="nc" id="L180">    public int getMoney() { return money; }</span>
+<span class="fc" id="L183">    public int getMoney() { return money; }</span>
 
     /**
-     * Setter method for money
-     * @param money
+     * Setter method for money.
+     * @param money of settings
      */
-<span class="nc" id="L186">    public void setMoney(int money) { this.money = money; }</span>
+<span class="fc" id="L189">    public void setMoney(int money) { this.money = money; }</span>
     /**
      * Method to get back the player's lvl.
      * @return number of lvl
      */
-<span class="nc" id="L191">    public int getLvl() { return lvl; }</span>
+<span class="fc" id="L194">    public int getLvl() { return lvl; }</span>
 
     /**
      * Setter method for lvl.
-     * @param lvl
+     * @param lvl of settings
      */
-<span class="nc" id="L197">    public void setLvl(int lvl) { this.lvl = lvl; }</span>
+<span class="fc" id="L200">    public void setLvl(int lvl) { this.lvl = lvl; }</span>
     /**
      * Method to get back the player's Ai Damage.
      * @return number of Ai Damage
      */
-<span class="nc" id="L202">    public int getAiDmg() { return aiDmg; }</span>
+<span class="fc" id="L205">    public int getAiDmg() { return aiDmg; }</span>
 
     /**
      * Setter method for Ai Damage.
-     * @param aiDmg
+     * @param aiDmg of settings
      */
-<span class="nc" id="L208">    public void setAiDmg(int aiDmg) { this.aiDmg = aiDmg; }</span>
+<span class="fc" id="L211">    public void setAiDmg(int aiDmg) { this.aiDmg = aiDmg; }</span>
     /**
      * Method to get back the player's Critical chance.
      * @return number of Critical chance.
      */
-<span class="nc" id="L213">    public int getCritical() { return critical; }</span>
+<span class="fc" id="L216">    public int getCritical() { return critical; }</span>
 
     /**
-     * Setter method for Critical Chance
-     * @param critical
+     * Setter method for Critical Chance.
+     * @param critical of settings
      */
-<span class="nc" id="L219">    public void setCritical(int critical) { this.critical = critical; }</span>
+<span class="fc" id="L222">    public void setCritical(int critical) { this.critical = critical; }</span>
     /**
      * Method to get back the player's Critical Damage.
      * @return number of Critical Damage
      */
-<span class="nc" id="L224">    public int getCriticalDmg() { return criticalDmg; }</span>
+<span class="fc" id="L227">    public int getCriticalDmg() { return criticalDmg; }</span>
 
     /**
-     * Setter method for Critical Damage
-     * @param criticalDmg
+     * Setter method for Critical Damage.
+     * @param criticalDmg of settings
      */
-<span class="nc" id="L230">    public void setCriticalDmg(int criticalDmg) { this.criticalDmg = criticalDmg; }</span>
+<span class="fc" id="L233">    public void setCriticalDmg(int criticalDmg) { this.criticalDmg = criticalDmg; }</span>
     /**
      * Method to get back the player's Reset Count.
      * @return number of Reset Count
      */
-<span class="nc" id="L235">    public int getResetCount() { return resetCount; }</span>
+<span class="fc" id="L238">    public int getResetCount() { return resetCount; }</span>
 
     /**
      * Setter method for Reset Count.
-     * @param resetCount
+     * @param resetCount of settings
      */
-<span class="nc" id="L241">    public void setResetCount(int resetCount) { this.resetCount = resetCount; }</span>
+<span class="fc" id="L244">    public void setResetCount(int resetCount) { this.resetCount = resetCount; }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

@@ -3,17 +3,31 @@ package dao;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-
+/**
+ * Player Entity methods.
+ */
 public class PlayerEntityDAOImpl {
-
+    /**
+     * Create a PlayerEntityDAOimpl.
+     */
     private static final PlayerEntityDAOImpl playerEntityDAOimpl = new PlayerEntityDAOImpl();
 
+    /**
+     * Method to get back the Player Entity.
+     * @return a playerEntityDAOimpl
+     */
     public static PlayerEntityDAOImpl getPlayerEntityDAOImpl(){
         return playerEntityDAOimpl;
     }
-
+    /**
+     * Constructor of the Player Entity.
+     */
     private PlayerEntityDAOImpl(){}
 
+    /**
+     * Method to delete a entity.
+     * @param entity to delete
+     */
     public void delete(PlayerEntity entity) {
         if(entity == null){
             throw new IllegalArgumentException("Entity is null!");
@@ -26,7 +40,11 @@ public class PlayerEntityDAOImpl {
         DBManager.entityManager.getTransaction().commit();
     }
 
-
+    /**
+     * Method to save a entity.
+     * @param entity to save a entity
+     * @return a player entity
+     */
     public PlayerEntity save(PlayerEntity entity) {
         if(entity == null){
             throw new IllegalArgumentException("Entity is null!");
@@ -44,6 +62,11 @@ public class PlayerEntityDAOImpl {
     }
 
 
+    /**
+     * Method to get back a entity.
+     * @param name of a player
+     * @return a entity if it find in the database or null
+     */
     public PlayerEntity findPlayerByName(String name) {
         try {
             Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerByName");
@@ -60,140 +83,7 @@ public class PlayerEntityDAOImpl {
         }
     }
 
-    public String getPlayerName(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerName");
-            query.setParameter("name", name);
-            String entity = (String) query.getSingleResult();
 
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-
-    public Integer getPlayerMoney(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerMoney");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-
-    public Integer getPlayerAiDmg(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerAiDmg");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-
-    public Integer getPlayerDmg(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerDmg");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-    public Integer getPlayerLvl(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerLvl");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-
-    public Integer getPlayerCriticalDmg(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerCriticalDmg");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-
-    public Integer getPlayerCritical(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerCritical");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
-
-    public Integer getPlayerResetCount(String name){
-        try{
-            Query query = DBManager.entityManager.createNamedQuery("PlayerEntity.findPlayerResetCount");
-            query.setParameter("name", name);
-            int entity = (Integer) query.getSingleResult();
-
-            return entity;
-        }catch (NoResultException e) {
-            System.out.println("Nem található ilyen Entity");
-            return null;
-        }catch (NullPointerException e) {
-
-            System.out.println("Ilyen Entity nincs az adatbázisban");
-            return null;
-        }
-    }
 
 
 

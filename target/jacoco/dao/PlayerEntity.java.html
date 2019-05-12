@@ -4,10 +4,13 @@
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity//emiat entity
+/**
+ * Entity of a player.
+ */
+@Entity
 @Table(name = &quot;TABLEB&quot;, schema = &quot;MY_OWN_SCHEMA&quot;)
 @NamedQueries({
-        //valamilyen feltételel lekérdezés, vagy csoportositás stb..
+
         @NamedQuery(name = &quot;PlayerEntity.findPlayerMoney&quot;, query = &quot;SELECT e.money FROM PlayerEntity e where e.name = :name&quot;),
         @NamedQuery(name = &quot;PlayerEntity.findPlayerByName&quot;, query = &quot;SELECT e FROM PlayerEntity e where e.name = :name&quot;),
         @NamedQuery(name = &quot;PlayerEntity.findPlayerName&quot;, query = &quot;SELECT e.name FROM PlayerEntity e where e.name = :name&quot;),
@@ -20,98 +23,186 @@ import java.io.Serializable;
 
 })
 
-<span class="nc" id="L23">public class PlayerEntity implements Serializable {</span>
-
+/**
+ * PlayerEntity represents an entity for JPA.
+ */
+<span class="nc" id="L29">public class PlayerEntity implements Serializable {</span>
+    /**
+     * Automatic generated first key for entity. Obligatory.
+     */
     @Id
     @GeneratedValue
     @Column(name = &quot;Id&quot;, nullable = false, updatable = false)
     private Long Id;
 
+    /**
+     * Representing Player's money in the database.
+     */
     @Column(name = &quot;MONEY&quot;)
     private Integer money;
-
+    /**
+     * Representing Player's aidmg in the database.
+     */
     @Column(name = &quot;AIDMG&quot;)
     private Integer aiDmg;
-
+    /**
+     * Representing Player's dmg in the database.
+     */
     @Column(name = &quot;DMG&quot;)
     private Integer dmg;
-
+    /**
+     * Representing Player's name in the database.
+     */
     @Column(name = &quot;NAME&quot;, unique = true, nullable = false)
     private String name;
-
+    /**
+     * Representing Player's lvl in the database.
+     */
     @Column(name = &quot;LVL&quot;)
     private Integer lvl;
-
+    /**
+     * Representing Player's critical chance in the database.
+     */
     @Column (name = &quot;CRITICAL&quot;)
     private Integer critical;
-
+    /**
+     * Representing Player's critical damage in the database.
+     */
     @Column (name = &quot;CRITICALDMG&quot;)
     private Integer criticalDmg;
-
+    /**
+     * Representing Player's reset count in the database.
+     */
     @Column (name = &quot;RESETCOUNT&quot;)
     private Integer resetCount;
 
-
+    /**
+     * Getter for get back AiDmg.
+     * @return a number of AiDmg
+     */
     public Integer getAiDmg() {
-<span class="nc" id="L56">        return aiDmg;</span>
+<span class="nc" id="L84">        return aiDmg;</span>
     }
-
+    /**
+     * Setter for aiDmg variable.
+     *
+     * @param aiDmg amount of aiDmg we want to set.
+     */
     public void setAiDmg(Integer aiDmg) {
-<span class="nc" id="L60">        this.aiDmg = aiDmg;</span>
-<span class="nc" id="L61">    }</span>
-
+<span class="nc" id="L92">        this.aiDmg = aiDmg;</span>
+<span class="nc" id="L93">    }</span>
+    /**
+     * Getter for Id variable.
+     *
+     * @return Id of the PlayerEntity
+     */
     public Long getId() {
-<span class="nc" id="L64">        return Id;</span>
+<span class="nc" id="L100">        return Id;</span>
     }
-
+    /**
+     * Setter for money variable.
+     *
+     * @param amount amount of money we want to set.
+     */
     public void setMoney(Integer amount) {
-<span class="nc" id="L68">        this.money = amount;</span>
-<span class="nc" id="L69">    }</span>
+<span class="nc" id="L108">        this.money = amount;</span>
+<span class="nc" id="L109">    }</span>
 
-
+    /**
+     * Getter for money variable.
+     *
+     * @return money of the PlayerEntity
+     */
     public Integer getMoney(){
-<span class="nc" id="L73">        return this.money;</span>
+<span class="nc" id="L117">        return this.money;</span>
     }
+    /**
+     * Getter for name.
+     *
+     * @return name of the PlayerEntity
+     */
+<span class="nc" id="L124">    public String getName(){ return this.name; }</span>
 
-<span class="nc" id="L76">    public String getName(){ return this.name; }</span>
+    /**
+     * Setter for name.
+     * @param name we want to set.
+     */
+<span class="nc" id="L130">    public void setName(String name) { this.name = name; }</span>
 
-<span class="nc" id="L78">    public void setName(String name) { this.name = name; }</span>
+    /**
+     * Getter for LvL.
+     * @return lvl of the PlayerEntity
+     */
+<span class="nc" id="L136">    public Integer getLvl(){ return this.lvl; }</span>
 
-<span class="nc" id="L80">    public Integer getLvl(){ return this.lvl; }</span>
+    /**
+     * Setter for LvL.
+     * @param lvl we want to set
+     */
+<span class="nc" id="L142">    public void setLvl(Integer lvl) { this.lvl = lvl; }</span>
 
-<span class="nc" id="L82">    public void setLvl(Integer lvl) { this.lvl = lvl; }</span>
-
-
+    /**
+     * Getter for Damage.
+     * @return dmg of the PlayerEntity
+     */
     public Integer getDmg() {
-<span class="nc" id="L86">        return dmg;</span>
+<span class="nc" id="L149">        return dmg;</span>
     }
 
+    /**
+     * Setter for Damage.
+     * @param dmg we want to set
+     */
     public void setDmg(Integer dmg) {
-<span class="nc" id="L90">        this.dmg = dmg;</span>
-<span class="nc" id="L91">    }</span>
+<span class="nc" id="L157">        this.dmg = dmg;</span>
+<span class="nc" id="L158">    }</span>
 
+    /**
+     * Getter for Critical Chance.
+     * @return critical chance of the PlayerEntity
+     */
     public Integer getCritical() {
-<span class="nc" id="L94">        return this.critical;</span>
+<span class="nc" id="L165">        return this.critical;</span>
     }
 
+    /**
+     * Setter for Critical Chance.
+     * @param critical we want to set
+     */
     public void setCritical(Integer critical) {
-<span class="nc" id="L98">        this.critical = critical;</span>
-<span class="nc" id="L99">    }</span>
+<span class="nc" id="L173">        this.critical = critical;</span>
+<span class="nc" id="L174">    }</span>
 
+    /**
+     * Getter for Critical Damage.
+     * @return Critical Damage of the PlayerEntity
+     */
     public Integer getCriticalDmg() {
-<span class="nc" id="L102">        return this.criticalDmg;</span>
+<span class="nc" id="L181">        return this.criticalDmg;</span>
     }
 
+    /**
+     * Setter for Critical Damage.
+     * @param criticalDmg we want to set
+     */
     public void setCriticalDmg(Integer criticalDmg) {
-<span class="nc" id="L106">        this.criticalDmg = criticalDmg;</span>
-<span class="nc" id="L107">    }</span>
+<span class="nc" id="L189">        this.criticalDmg = criticalDmg;</span>
+<span class="nc" id="L190">    }</span>
 
+    /**
+     * Getter for Reset Count.
+     * @return Reset Count of the PlayerEntity
+     */
     public Integer getResetCount() {
-<span class="nc" id="L110">        return this.resetCount;</span>
+<span class="nc" id="L197">        return this.resetCount;</span>
     }
 
+    /**
+     * Setter of the reset count.
+     * @param resetCount we want to set.
+     */
     public void setResetCount(Integer resetCount) {
-<span class="nc" id="L114">        this.resetCount = resetCount;</span>
-<span class="nc" id="L115">    }</span>
+<span class="nc" id="L205">        this.resetCount = resetCount;</span>
+<span class="nc" id="L206">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

@@ -2,7 +2,7 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 game,app,MainApp,42,0,0,0,15,0,4,0,4,0
 game,controller,CharacterController.new Runnable() {...},12,0,0,0,3,0,2,0,2,0
 game,controller,WellcomeSceneController,129,0,2,0,35,0,6,0,5,0
-game,controller,BattleController,1006,0,26,0,144,0,27,0,14,0
+game,controller,BattleController,994,0,26,0,143,0,27,0,14,0
 game,controller,CharacterController.2.new Runnable() {...},30,0,0,0,3,0,2,0,2,0
 game,controller,BattleController.new Runnable() {...},12,0,0,0,3,0,2,0,2,0
 game,controller,BattleController.new EventHandler() {...},10,0,0,0,3,0,2,0,2,0
@@ -10,7 +10,7 @@ game,controller,BattleController.2.new Runnable() {...},11,0,0,0,3,0,2,0,2,0
 game,controller,CharacterController.new EventHandler() {...},10,0,0,0,3,0,2,0,2,0
 game,controller,CharacterController,504,0,18,0,79,0,22,0,13,0
 game,dao,PlayerEntity,62,0,0,0,24,0,18,0,18,0
-game,dao,DBManager,28,0,4,0,9,0,7,0,5,0
-game,dao,PlayerEntityDAOImpl,305,0,6,0,103,0,16,0,13,0
-game,modell,Player,300,0,10,0,66,0,29,0,24,0
-game,modell,Enemy,31,0,0,0,12,0,9,0,9,0
+game,dao,DBManager,32,0,4,0,10,0,7,0,5,0
+game,dao,PlayerEntityDAOImpl,75,0,6,0,23,0,8,0,5,0
+game,modell,Player,99,201,1,9,24,42,3,26,2,22
+game,modell,Enemy,0,31,0,0,0,12,0,9,0,9

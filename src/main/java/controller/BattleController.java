@@ -169,7 +169,6 @@ public class BattleController implements Initializable{
                 try{
                     int random = (int )(Math.random() * 3 + 1);
 
-                    System.out.println("Images/Mob"+random+".png");
                     Image image = new Image(getClass().getResource("/Images/Mob"+random+".png").toExternalForm());
 
                     //mobImage.setImage(image);

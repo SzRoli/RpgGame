@@ -89,7 +89,7 @@ public class Player {
     }
 
     /**
-     * Critical plus method to plus the player's critical
+     * Critical plus method to plus the player's critical.
      * @param critChanceGoldAmount of settings
      */
     public void critPlus(double critChanceGoldAmount) {
@@ -100,7 +100,8 @@ public class Player {
         }
     }
     /**
-     * Critical Damage plus method to plus player's critical damage
+     * Critical Damage plus method to plus player's critical damage.
+     * @param critDmgGoldAmount of settings
      */
     public void critDmgPlus(double critDmgGoldAmount)
     {
@@ -111,7 +112,8 @@ public class Player {
         }
     }
     /**
-     * Ai damage plus method to plus the player's ai damage
+     * Ai damage plus method to plus the player's ai damage.
+     * @param aiDmgGoldAmount of settings
      */
     public void aiDmgPlus(double aiDmgGoldAmount)
     {
@@ -139,6 +141,7 @@ public class Player {
     }
     /**
      * Damage plus method to plus Player's Damage.
+     * @param dmgGoldAmount of settings
      */
     public void dmgPlus(double dmgGoldAmount)
     {
@@ -169,8 +172,8 @@ public class Player {
     public int getDmg() { return dmg; }
 
     /**
-     * Setter method for damage
-     * @param dmg
+     * Setter method for damage.
+     * @param dmg of settings
      */
     public void setDmg(int dmg) { this.dmg = dmg; }
     /**
@@ -180,8 +183,8 @@ public class Player {
     public int getMoney() { return money; }
 
     /**
-     * Setter method for money
-     * @param money
+     * Setter method for money.
+     * @param money of settings
      */
     public void setMoney(int money) { this.money = money; }
     /**
@@ -192,7 +195,7 @@ public class Player {
 
     /**
      * Setter method for lvl.
-     * @param lvl
+     * @param lvl of settings
      */
     public void setLvl(int lvl) { this.lvl = lvl; }
     /**
@@ -203,7 +206,7 @@ public class Player {
 
     /**
      * Setter method for Ai Damage.
-     * @param aiDmg
+     * @param aiDmg of settings
      */
     public void setAiDmg(int aiDmg) { this.aiDmg = aiDmg; }
     /**
@@ -213,8 +216,8 @@ public class Player {
     public int getCritical() { return critical; }
 
     /**
-     * Setter method for Critical Chance
-     * @param critical
+     * Setter method for Critical Chance.
+     * @param critical of settings
      */
     public void setCritical(int critical) { this.critical = critical; }
     /**
@@ -224,8 +227,8 @@ public class Player {
     public int getCriticalDmg() { return criticalDmg; }
 
     /**
-     * Setter method for Critical Damage
-     * @param criticalDmg
+     * Setter method for Critical Damage.
+     * @param criticalDmg of settings
      */
     public void setCriticalDmg(int criticalDmg) { this.criticalDmg = criticalDmg; }
     /**
@@ -236,7 +239,7 @@ public class Player {
 
     /**
      * Setter method for Reset Count.
-     * @param resetCount
+     * @param resetCount of settings
      */
     public void setResetCount(int resetCount) { this.resetCount = resetCount; }
 }

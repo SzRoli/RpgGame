@@ -1,30 +1,24 @@
 package modell;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.*;
+import modell.Enemy;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 /**
  * Test class for Enemy class.
  **/
 public class EnemyTest {
 
-    Enemy enemy;
+    private Enemy enemy;
+
     /**
-     *Sets up the test.
+     * Sets up the test.
      **/
-    @BeforeEach
-    public void setUp() throws Exception {
+    @Before
+    public void setUp() {
         enemy = new Enemy();
     }
-    /**
-     *Clear the enemy class.
-     **/
-    @AfterEach
-    public void tearDown() throws Exception {
-        enemy = null;
-    }
+
     /**
      * Test method for Enemy class's getters/setters.
      **/
@@ -40,4 +34,12 @@ public class EnemyTest {
         assertEquals(20,enemy.getGold());
 
     }
+
+    @Test
+    public void setMaxHp() {
+        enemy.setMaxHp(10);
+        assertEquals(10, enemy.getMaxHp());
+    }
+
+
 }

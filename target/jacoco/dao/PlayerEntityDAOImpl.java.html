@@ -3,197 +3,87 @@
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-
+/**
+ * Player Entity methods.
+ */
 public class PlayerEntityDAOImpl {
+    /**
+     * Create a PlayerEntityDAOimpl.
+     */
+<span class="nc" id="L13">    private static final PlayerEntityDAOImpl playerEntityDAOimpl = new PlayerEntityDAOImpl();</span>
 
-<span class="nc" id="L9">    private static final PlayerEntityDAOImpl playerEntityDAOimpl = new PlayerEntityDAOImpl();</span>
-
+    /**
+     * Method to get back the Player Entity.
+     * @return a playerEntityDAOimpl
+     */
     public static PlayerEntityDAOImpl getPlayerEntityDAOImpl(){
-<span class="nc" id="L12">        return playerEntityDAOimpl;</span>
+<span class="nc" id="L20">        return playerEntityDAOimpl;</span>
     }
-
+    /**
+     * Constructor of the Player Entity.
+     */
     private PlayerEntityDAOImpl(){}
 
+    /**
+     * Method to delete a entity.
+     * @param entity to delete
+     */
     public void delete(PlayerEntity entity) {
-<span class="nc bnc" id="L18" title="All 2 branches missed.">        if(entity == null){</span>
-<span class="nc" id="L19">            throw new IllegalArgumentException(&quot;Entity is null!&quot;);</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if(entity == null){</span>
+<span class="nc" id="L33">            throw new IllegalArgumentException(&quot;Entity is null!&quot;);</span>
         }
 
-<span class="nc" id="L22">        PlayerEntity delEntity = DBManager.entityManager.find(PlayerEntity.class, entity.getId());</span>
+<span class="nc" id="L36">        PlayerEntity delEntity = DBManager.entityManager.find(PlayerEntity.class, entity.getId());</span>
 
-<span class="nc" id="L24">        DBManager.entityManager.getTransaction().begin();</span>
-<span class="nc" id="L25">        DBManager.entityManager.remove(delEntity);</span>
-<span class="nc" id="L26">        DBManager.entityManager.getTransaction().commit();</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L38">        DBManager.entityManager.getTransaction().begin();</span>
+<span class="nc" id="L39">        DBManager.entityManager.remove(delEntity);</span>
+<span class="nc" id="L40">        DBManager.entityManager.getTransaction().commit();</span>
+<span class="nc" id="L41">    }</span>
 
-
+    /**
+     * Method to save a entity.
+     * @param entity to save a entity
+     * @return a player entity
+     */
     public PlayerEntity save(PlayerEntity entity) {
-<span class="nc bnc" id="L31" title="All 2 branches missed.">        if(entity == null){</span>
-<span class="nc" id="L32">            throw new IllegalArgumentException(&quot;Entity is null!&quot;);</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">        if(entity == null){</span>
+<span class="nc" id="L50">            throw new IllegalArgumentException(&quot;Entity is null!&quot;);</span>
         }
 
-<span class="nc" id="L35">        DBManager.entityManager.getTransaction().begin();</span>
+<span class="nc" id="L53">        DBManager.entityManager.getTransaction().begin();</span>
 
-<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(entity.getId() == null){</span>
-<span class="nc" id="L38">            DBManager.entityManager.persist(entity);</span>
-<span class="nc" id="L39">        } else { DBManager.entityManager.merge(entity);}</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        if(entity.getId() == null){</span>
+<span class="nc" id="L56">            DBManager.entityManager.persist(entity);</span>
+<span class="nc" id="L57">        } else { DBManager.entityManager.merge(entity);}</span>
 
-<span class="nc" id="L41">        DBManager.entityManager.getTransaction().commit();</span>
+<span class="nc" id="L59">        DBManager.entityManager.getTransaction().commit();</span>
 
-<span class="nc" id="L43">        return entity;</span>
+<span class="nc" id="L61">        return entity;</span>
     }
 
 
+    /**
+     * Method to get back a entity.
+     * @param name of a player
+     * @return a entity if it find in the database or null
+     */
     public PlayerEntity findPlayerByName(String name) {
         try {
-<span class="nc" id="L49">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerByName&quot;);</span>
-<span class="nc" id="L50">            query.setParameter(&quot;name&quot;, name);</span>
+<span class="nc" id="L72">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerByName&quot;);</span>
+<span class="nc" id="L73">            query.setParameter(&quot;name&quot;, name);</span>
 
-<span class="nc" id="L52">            PlayerEntity entity = (PlayerEntity) query.getSingleResult();</span>
+<span class="nc" id="L75">            PlayerEntity entity = (PlayerEntity) query.getSingleResult();</span>
 
-<span class="nc" id="L54">            return entity;</span>
+<span class="nc" id="L77">            return entity;</span>
 
 
-<span class="nc" id="L57">        } catch (NoResultException e) {</span>
+<span class="nc" id="L80">        } catch (NoResultException e) {</span>
 
-<span class="nc" id="L59">            return null;</span>
+<span class="nc" id="L82">            return null;</span>
         }
     }
 
-    public String getPlayerName(String name){
-        try{
-<span class="nc" id="L65">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerName&quot;);</span>
-<span class="nc" id="L66">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L67">            String entity = (String) query.getSingleResult();</span>
 
-<span class="nc" id="L69">            return entity;</span>
-<span class="nc" id="L70">        }catch (NoResultException e) {</span>
-<span class="nc" id="L71">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L72">            return null;</span>
-<span class="nc" id="L73">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L75">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L76">            return null;</span>
-        }
-    }
-
-    public Integer getPlayerMoney(String name){
-        try{
-<span class="nc" id="L82">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerMoney&quot;);</span>
-<span class="nc" id="L83">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L84">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L86">            return entity;</span>
-<span class="nc" id="L87">        }catch (NoResultException e) {</span>
-<span class="nc" id="L88">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L89">            return null;</span>
-<span class="nc" id="L90">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L92">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L93">            return null;</span>
-        }
-    }
-
-    public Integer getPlayerAiDmg(String name){
-        try{
-<span class="nc" id="L99">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerAiDmg&quot;);</span>
-<span class="nc" id="L100">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L101">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L103">            return entity;</span>
-<span class="nc" id="L104">        }catch (NoResultException e) {</span>
-<span class="nc" id="L105">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L106">            return null;</span>
-<span class="nc" id="L107">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L109">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L110">            return null;</span>
-        }
-    }
-
-    public Integer getPlayerDmg(String name){
-        try{
-<span class="nc" id="L116">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerDmg&quot;);</span>
-<span class="nc" id="L117">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L118">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L120">            return entity;</span>
-<span class="nc" id="L121">        }catch (NoResultException e) {</span>
-<span class="nc" id="L122">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L123">            return null;</span>
-<span class="nc" id="L124">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L126">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L127">            return null;</span>
-        }
-    }
-    public Integer getPlayerLvl(String name){
-        try{
-<span class="nc" id="L132">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerLvl&quot;);</span>
-<span class="nc" id="L133">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L134">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L136">            return entity;</span>
-<span class="nc" id="L137">        }catch (NoResultException e) {</span>
-<span class="nc" id="L138">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L139">            return null;</span>
-<span class="nc" id="L140">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L142">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L143">            return null;</span>
-        }
-    }
-
-    public Integer getPlayerCriticalDmg(String name){
-        try{
-<span class="nc" id="L149">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerCriticalDmg&quot;);</span>
-<span class="nc" id="L150">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L151">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L153">            return entity;</span>
-<span class="nc" id="L154">        }catch (NoResultException e) {</span>
-<span class="nc" id="L155">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L156">            return null;</span>
-<span class="nc" id="L157">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L159">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L160">            return null;</span>
-        }
-    }
-
-    public Integer getPlayerCritical(String name){
-        try{
-<span class="nc" id="L166">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerCritical&quot;);</span>
-<span class="nc" id="L167">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L168">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L170">            return entity;</span>
-<span class="nc" id="L171">        }catch (NoResultException e) {</span>
-<span class="nc" id="L172">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L173">            return null;</span>
-<span class="nc" id="L174">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L176">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L177">            return null;</span>
-        }
-    }
-
-    public Integer getPlayerResetCount(String name){
-        try{
-<span class="nc" id="L183">            Query query = DBManager.entityManager.createNamedQuery(&quot;PlayerEntity.findPlayerResetCount&quot;);</span>
-<span class="nc" id="L184">            query.setParameter(&quot;name&quot;, name);</span>
-<span class="nc" id="L185">            int entity = (Integer) query.getSingleResult();</span>
-
-<span class="nc" id="L187">            return entity;</span>
-<span class="nc" id="L188">        }catch (NoResultException e) {</span>
-<span class="nc" id="L189">            System.out.println(&quot;Nem található ilyen Entity&quot;);</span>
-<span class="nc" id="L190">            return null;</span>
-<span class="nc" id="L191">        }catch (NullPointerException e) {</span>
-
-<span class="nc" id="L193">            System.out.println(&quot;Ilyen Entity nincs az adatbázisban&quot;);</span>
-<span class="nc" id="L194">            return null;</span>
-        }
-    }
 
 
 

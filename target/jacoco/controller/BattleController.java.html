@@ -169,185 +169,184 @@ import java.util.concurrent.TimeUnit;
                 try{
 <span class="nc" id="L170">                    int random = (int )(Math.random() * 3 + 1);</span>
 
-<span class="nc" id="L172">                    System.out.println(&quot;Images/Mob&quot;+random+&quot;.png&quot;);</span>
-<span class="nc" id="L173">                    Image image = new Image(getClass().getResource(&quot;/Images/Mob&quot;+random+&quot;.png&quot;).toExternalForm());</span>
+<span class="nc" id="L172">                    Image image = new Image(getClass().getResource(&quot;/Images/Mob&quot;+random+&quot;.png&quot;).toExternalForm());</span>
 
                     //mobImage.setImage(image);
-<span class="nc" id="L176">                    mobImage.setImage(image);</span>
-<span class="nc" id="L177">                }catch(Exception e){</span>
-<span class="nc" id="L178">                    System.out.println(&quot;Could open the image file!: &quot;+e);</span>
-<span class="nc" id="L179">                }</span>
+<span class="nc" id="L175">                    mobImage.setImage(image);</span>
+<span class="nc" id="L176">                }catch(Exception e){</span>
+<span class="nc" id="L177">                    System.out.println(&quot;Could open the image file!: &quot;+e);</span>
+<span class="nc" id="L178">                }</span>
 
-<span class="nc" id="L181">                enemy.setHp(enemy.getMaxHp());</span>
-<span class="nc" id="L182">                enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
+<span class="nc" id="L180">                enemy.setHp(enemy.getMaxHp());</span>
+<span class="nc" id="L181">                enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
             }else{
                 try{
-<span class="nc" id="L185">                    int random = (int )(Math.random() * 3 + 1);</span>
+<span class="nc" id="L184">                    int random = (int )(Math.random() * 3 + 1);</span>
 
                     /*System.out.println(&quot;Images/Mob&quot;+random+&quot;.png&quot;);
                     Image image = new Image(&quot;Images/Mob&quot;+random+&quot;.png&quot;);*/
                     //mobImage.setImage(image);
-<span class="nc" id="L190">                    Image image = new Image(getClass().getResource(&quot;/Images/Mob&quot;+random+&quot;.png&quot;).toExternalForm());</span>
-<span class="nc" id="L191">                    mobImage.setImage(image);</span>
+<span class="nc" id="L189">                    Image image = new Image(getClass().getResource(&quot;/Images/Mob&quot;+random+&quot;.png&quot;).toExternalForm());</span>
+<span class="nc" id="L190">                    mobImage.setImage(image);</span>
 
 
                     //mobImage.setImage(new Image(getClass().getResource(&quot;Images/Mob&quot;+random+&quot;.png&quot;).toExternalForm()));
-<span class="nc" id="L195">                }catch(Exception e){</span>
-<span class="nc" id="L196">                    System.out.println(&quot;Could open the image file!: &quot;+e);</span>
-<span class="nc" id="L197">                }</span>
-<span class="nc" id="L198">                enemy.setHp(enemy.getMaxHp()+400);</span>
-<span class="nc" id="L199">                enemy.setMaxHp(enemy.getHp());</span>
-<span class="nc" id="L200">                enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
-<span class="nc" id="L201">                enemy.setLvl(enemy.getLvl()+1);</span>
-<span class="nc bnc" id="L202" title="All 2 branches missed.">                if(enemy.getLvl()&gt;player.getLvl()){</span>
-<span class="nc" id="L203">                    player.setLvl(enemy.getLvl());</span>
+<span class="nc" id="L194">                }catch(Exception e){</span>
+<span class="nc" id="L195">                    System.out.println(&quot;Could open the image file!: &quot;+e);</span>
+<span class="nc" id="L196">                }</span>
+<span class="nc" id="L197">                enemy.setHp(enemy.getMaxHp()+400);</span>
+<span class="nc" id="L198">                enemy.setMaxHp(enemy.getHp());</span>
+<span class="nc" id="L199">                enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
+<span class="nc" id="L200">                enemy.setLvl(enemy.getLvl()+1);</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">                if(enemy.getLvl()&gt;player.getLvl()){</span>
+<span class="nc" id="L202">                    player.setLvl(enemy.getLvl());</span>
                 }
-<span class="nc" id="L205">                lvlText.setText(&quot;&quot;+enemy.getLvl());</span>
+<span class="nc" id="L204">                lvlText.setText(&quot;&quot;+enemy.getLvl());</span>
             }
 
-<span class="nc" id="L208">            yourMoney.setText(&quot;&quot;+format(player.getMoney())+&quot;G&quot;);</span>
-<span class="nc bnc" id="L209" title="All 2 branches missed.">            if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
-<span class="nc" id="L210">                opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
+<span class="nc" id="L207">            yourMoney.setText(&quot;&quot;+format(player.getMoney())+&quot;G&quot;);</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">            if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
+<span class="nc" id="L209">                opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
             }else{
-<span class="nc" id="L212">                opaci = 0;</span>
+<span class="nc" id="L211">                opaci = 0;</span>
             }
-<span class="nc" id="L214">            hpBar.setProgress(opaci);</span>
-<span class="nc" id="L215">            player.save();</span>
+<span class="nc" id="L213">            hpBar.setProgress(opaci);</span>
+<span class="nc" id="L214">            player.save();</span>
 
         }
-<span class="nc" id="L218">    }</span>
+<span class="nc" id="L217">    }</span>
 
     private void bossTimer(){
 
-<span class="nc" id="L222">        System.out.println(&quot;boss: &quot;+30+&quot; s&quot;);</span>
+<span class="nc" id="L221">        System.out.println(&quot;boss: &quot;+30+&quot; s&quot;);</span>
 
-<span class="nc" id="L224">    }</span>
+<span class="nc" id="L223">    }</span>
 
     private String format(int number){
-<span class="nc" id="L227">        double result = number;</span>
-<span class="nc bnc" id="L228" title="All 2 branches missed.">        if(number/1000&gt;0){</span>
-<span class="nc" id="L229">            return &quot;&quot;+result/1000+&quot;k &quot;;</span>
+<span class="nc" id="L226">        double result = number;</span>
+<span class="nc bnc" id="L227" title="All 2 branches missed.">        if(number/1000&gt;0){</span>
+<span class="nc" id="L228">            return &quot;&quot;+result/1000+&quot;k &quot;;</span>
         }
-<span class="nc" id="L231">        return &quot;&quot;+result;</span>
+<span class="nc" id="L230">        return &quot;&quot;+result;</span>
     }
 
     void attack() {
 
 
-<span class="nc bnc" id="L237" title="All 2 branches missed.">            if(random.nextInt(100) &lt;= player.getCritical()){</span>
-<span class="nc" id="L238">                enemy.setHp(enemy.getHp()-player.getDmg()*player.getCriticalDmg());</span>
-<span class="nc bnc" id="L239" title="All 2 branches missed.">                if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
-<span class="nc" id="L240">                    opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
+<span class="nc bnc" id="L236" title="All 2 branches missed.">            if(random.nextInt(100) &lt;= player.getCritical()){</span>
+<span class="nc" id="L237">                enemy.setHp(enemy.getHp()-player.getDmg()*player.getCriticalDmg());</span>
+<span class="nc bnc" id="L238" title="All 2 branches missed.">                if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
+<span class="nc" id="L239">                    opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
                 }else{
-<span class="nc" id="L242">                    opaci = 0;</span>
+<span class="nc" id="L241">                    opaci = 0;</span>
                 }
-<span class="nc" id="L244">                dmgText.setOpacity(0);</span>
-<span class="nc" id="L245">                dmgText.setFont(Font.font(42));</span>
-<span class="nc" id="L246">                dmgText.setFill(Color.ORANGE);</span>
+<span class="nc" id="L243">                dmgText.setOpacity(0);</span>
+<span class="nc" id="L244">                dmgText.setFont(Font.font(42));</span>
+<span class="nc" id="L245">                dmgText.setFill(Color.ORANGE);</span>
 
-<span class="nc" id="L248">                dmgText.setText(&quot;&quot;+format(player.getDmg()*player.getCriticalDmg())+&quot; Hit&quot;);</span>
+<span class="nc" id="L247">                dmgText.setText(&quot;&quot;+format(player.getDmg()*player.getCriticalDmg())+&quot; Hit&quot;);</span>
 
-<span class="nc" id="L250">                makeFadeTrandText();</span>
+<span class="nc" id="L249">                makeFadeTrandText();</span>
             }else{
-<span class="nc" id="L252">                enemy.setHp(enemy.getHp()-player.getDmg());</span>
-<span class="nc bnc" id="L253" title="All 2 branches missed.">                if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
-<span class="nc" id="L254">                    opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
+<span class="nc" id="L251">                enemy.setHp(enemy.getHp()-player.getDmg());</span>
+<span class="nc bnc" id="L252" title="All 2 branches missed.">                if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
+<span class="nc" id="L253">                    opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
                 }else{
-<span class="nc" id="L256">                    opaci = 0;</span>
+<span class="nc" id="L255">                    opaci = 0;</span>
                 }
-<span class="nc" id="L258">                dmgText.setOpacity(0);</span>
-<span class="nc" id="L259">                dmgText.setFill(Color.RED);</span>
-<span class="nc" id="L260">                dmgText.setFont(Font.font(32));</span>
+<span class="nc" id="L257">                dmgText.setOpacity(0);</span>
+<span class="nc" id="L258">                dmgText.setFill(Color.RED);</span>
+<span class="nc" id="L259">                dmgText.setFont(Font.font(32));</span>
 
-<span class="nc" id="L262">                dmgText.setText(&quot;&quot;+format(player.getDmg())+&quot; Hit&quot;);</span>
+<span class="nc" id="L261">                dmgText.setText(&quot;&quot;+format(player.getDmg())+&quot; Hit&quot;);</span>
 
 
-<span class="nc" id="L265">                makeFadeTrandText();</span>
+<span class="nc" id="L264">                makeFadeTrandText();</span>
             }
 
-<span class="nc" id="L268">            opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
-<span class="nc" id="L269">            hpBar.setProgress(opaci);</span>
+<span class="nc" id="L267">            opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
+<span class="nc" id="L268">            hpBar.setProgress(opaci);</span>
 
-<span class="nc" id="L271">            enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
+<span class="nc" id="L270">            enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
 
-<span class="nc" id="L273">            winCheck(enemy.getHp());</span>
+<span class="nc" id="L272">            winCheck(enemy.getHp());</span>
 
-<span class="nc" id="L275">    }</span>
+<span class="nc" id="L274">    }</span>
     void AiAttack(){
 
-<span class="nc" id="L278">        enemy.setHp(enemy.getHp()-player.getAiDmg());</span>
-<span class="nc bnc" id="L279" title="All 2 branches missed.">        if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
-<span class="nc" id="L280">            opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
+<span class="nc" id="L277">        enemy.setHp(enemy.getHp()-player.getAiDmg());</span>
+<span class="nc bnc" id="L278" title="All 2 branches missed.">        if((double)enemy.getHp()/enemy.getMaxHp()&gt;0){</span>
+<span class="nc" id="L279">            opaci = (double)enemy.getHp()/enemy.getMaxHp();</span>
         }else{
-<span class="nc" id="L282">            opaci = 0;</span>
+<span class="nc" id="L281">            opaci = 0;</span>
         }
 
 
-<span class="nc" id="L286">        hpBar.setProgress(opaci);</span>
+<span class="nc" id="L285">        hpBar.setProgress(opaci);</span>
 
 
-<span class="nc" id="L289">        dmgText.setOpacity(0);</span>
-<span class="nc" id="L290">        dmgText.setFont(Font.font(42));</span>
-<span class="nc" id="L291">        dmgText.setFill(Color.BLUE);</span>
+<span class="nc" id="L288">        dmgText.setOpacity(0);</span>
+<span class="nc" id="L289">        dmgText.setFont(Font.font(42));</span>
+<span class="nc" id="L290">        dmgText.setFill(Color.BLUE);</span>
 
-<span class="nc" id="L293">        dmgText.setText(&quot;&quot;+format(player.getAiDmg())+&quot; Hit&quot;);</span>
+<span class="nc" id="L292">        dmgText.setText(&quot;&quot;+format(player.getAiDmg())+&quot; Hit&quot;);</span>
 
-<span class="nc" id="L295">        makeFadeTrandText();</span>
+<span class="nc" id="L294">        makeFadeTrandText();</span>
 
 
 
-<span class="nc" id="L299">        enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
+<span class="nc" id="L298">        enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
 
-<span class="nc" id="L301">        winCheck(enemy.getHp());</span>
-<span class="nc" id="L302">    }</span>
+<span class="nc" id="L300">        winCheck(enemy.getHp());</span>
+<span class="nc" id="L301">    }</span>
     private void makeFadeTrans(int start, int end){
-<span class="nc" id="L304">        FadeTransition fadeTransition = new FadeTransition();</span>
-<span class="nc" id="L305">        fadeTransition.setDuration(Duration.millis(1000));</span>
-<span class="nc" id="L306">        fadeTransition.setNode(rootPane);</span>
-<span class="nc" id="L307">        fadeTransition.setFromValue(start);</span>
-<span class="nc" id="L308">        fadeTransition.setToValue(end);</span>
-<span class="nc bnc" id="L309" title="All 2 branches missed.">        if(end &lt; start){</span>
-<span class="nc" id="L310">            fadeTransition.setOnFinished(new EventHandler&lt;ActionEvent&gt;() {</span>
+<span class="nc" id="L303">        FadeTransition fadeTransition = new FadeTransition();</span>
+<span class="nc" id="L304">        fadeTransition.setDuration(Duration.millis(1000));</span>
+<span class="nc" id="L305">        fadeTransition.setNode(rootPane);</span>
+<span class="nc" id="L306">        fadeTransition.setFromValue(start);</span>
+<span class="nc" id="L307">        fadeTransition.setToValue(end);</span>
+<span class="nc bnc" id="L308" title="All 2 branches missed.">        if(end &lt; start){</span>
+<span class="nc" id="L309">            fadeTransition.setOnFinished(new EventHandler&lt;ActionEvent&gt;() {</span>
                 public void handle(ActionEvent event) {
-<span class="nc" id="L312">                    loadNextScene();</span>
-<span class="nc" id="L313">                }</span>
+<span class="nc" id="L311">                    loadNextScene();</span>
+<span class="nc" id="L312">                }</span>
             });
         }
-<span class="nc" id="L316">        fadeTransition.play();</span>
-<span class="nc" id="L317">    }</span>
+<span class="nc" id="L315">        fadeTransition.play();</span>
+<span class="nc" id="L316">    }</span>
     private void makeFadeTrandText(){
-<span class="nc" id="L319">        FadeTransition fadeTransition = new FadeTransition();</span>
-<span class="nc" id="L320">        fadeTransition.setDuration(Duration.millis(1000));</span>
-<span class="nc" id="L321">        fadeTransition.setNode(dmgText);</span>
-<span class="nc" id="L322">        fadeTransition.setFromValue(1);</span>
-<span class="nc" id="L323">        fadeTransition.setToValue(0);</span>
-<span class="nc" id="L324">        fadeTransition.play();</span>
-<span class="nc" id="L325">    }</span>
+<span class="nc" id="L318">        FadeTransition fadeTransition = new FadeTransition();</span>
+<span class="nc" id="L319">        fadeTransition.setDuration(Duration.millis(1000));</span>
+<span class="nc" id="L320">        fadeTransition.setNode(dmgText);</span>
+<span class="nc" id="L321">        fadeTransition.setFromValue(1);</span>
+<span class="nc" id="L322">        fadeTransition.setToValue(0);</span>
+<span class="nc" id="L323">        fadeTransition.play();</span>
+<span class="nc" id="L324">    }</span>
     public void initialize(URL url, ResourceBundle rb){
-<span class="nc" id="L327">        enemy.setLvl(player.getLvl());</span>
-<span class="nc" id="L328">        Platform.setImplicitExit(false);</span>
+<span class="nc" id="L326">        enemy.setLvl(player.getLvl());</span>
+<span class="nc" id="L327">        Platform.setImplicitExit(false);</span>
 
-<span class="nc" id="L330">        exec.scheduleAtFixedRate(new Runnable() {</span>
+<span class="nc" id="L329">        exec.scheduleAtFixedRate(new Runnable() {</span>
 
             public void run() {
-<span class="nc" id="L333">                Platform.runLater(new Runnable() {</span>
+<span class="nc" id="L332">                Platform.runLater(new Runnable() {</span>
                     public void run() {
-<span class="nc" id="L335">                        AiAttack();</span>
-<span class="nc" id="L336">                    }</span>
+<span class="nc" id="L334">                        AiAttack();</span>
+<span class="nc" id="L335">                    }</span>
                 });
 
-<span class="nc" id="L339">            }</span>
+<span class="nc" id="L338">            }</span>
         }, 0, 500,  TimeUnit.MILLISECONDS);
 
-<span class="nc" id="L342">        makeFadeTrans(0,1);</span>
-<span class="nc" id="L343">        lvlText.setText(&quot;&quot;+enemy.getLvl());</span>
-<span class="nc" id="L344">        yourMoney.setText(&quot;&quot;+format(player.getMoney())+&quot;G&quot;);</span>
-<span class="nc" id="L345">        enemy.setHp(enemy.getLvl()*400);</span>
-<span class="nc" id="L346">        enemy.setMaxHp(enemy.getHp());</span>
+<span class="nc" id="L341">        makeFadeTrans(0,1);</span>
+<span class="nc" id="L342">        lvlText.setText(&quot;&quot;+enemy.getLvl());</span>
+<span class="nc" id="L343">        yourMoney.setText(&quot;&quot;+format(player.getMoney())+&quot;G&quot;);</span>
+<span class="nc" id="L344">        enemy.setHp(enemy.getLvl()*400);</span>
+<span class="nc" id="L345">        enemy.setMaxHp(enemy.getHp());</span>
 
-<span class="nc" id="L348">        enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
+<span class="nc" id="L347">        enemyHpText.setText(&quot;&quot;+format(enemy.getHp())+&quot; / &quot;+format(enemy.getMaxHp()));</span>
 
 
-<span class="nc" id="L351">    }</span>
+<span class="nc" id="L350">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span></div></body></html>

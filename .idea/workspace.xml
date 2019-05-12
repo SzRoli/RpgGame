@@ -8,83 +8,38 @@
       <change beforePath="$PROJECT_DIR$/RPGDB/log/log2.dat" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/log/log2.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGDB/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/log/logmirror.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RPGDB/seg0/c570.dat" beforeDir="false" afterPath="$PROJECT_DIR$/RPGDB/seg0/c570.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/BattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BattleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modell/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modell/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/PlayerEntityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PlayerEntityDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modell/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modell/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-checker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-checker.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BattleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BattleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/CharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CharacterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/WellcomeSceneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/WellcomeSceneController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/DBManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DBManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/PlayerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/PlayerEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/PlayerEntityDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/PlayerEntityDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/modell/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modell/Enemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/modell/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modell/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/allclasses-noframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/MainApp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/class-use/MainApp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/app/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/BattleController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/CharacterController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/WellcomeSceneController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/class-use/BattleController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/class-use/CharacterController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/class-use/WellcomeSceneController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/controller/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/DBManager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/PlayerEntity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/PlayerEntityDAOImpl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/class-use/DBManager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/class-use/PlayerEntity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/class-use/PlayerEntityDAOImpl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/dao/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/deprecated-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index-all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/Enemy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/Player.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/class-use/Enemy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/class-use/Player.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/modell/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/package-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/serialized-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/apidocs/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/checkstyle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/checkstyle.rss" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/checkstyle.rss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/DBManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/DBManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/DBManager.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/DBManager.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntity.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntity.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntity.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntityDAOImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntityDAOImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntityDAOImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/PlayerEntityDAOImpl.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/dao/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/dao/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/modell/Enemy.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/modell/Enemy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/modell/Enemy.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/modell/Enemy.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/modell/Player.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/modell/Player.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/modell/Player.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/modell/Player.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/modell/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/modell/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco/modell/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco/modell/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/modell/EnemyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modell/EnemyTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/modell/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/modell/PlayerTest.class" afterDir="false" />
     </list>
@@ -102,34 +57,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+            <state relative-caret-position="119">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2732#2733#0" expanded="true" />
+                <element signature="e#2760#2761#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#2130#2131#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2182#2183#0" expanded="true" />
+                <element signature="e#2226#2227#0" expanded="true" />
+                <element signature="e#2261#2262#0" expanded="true" />
+                <element signature="e#2294#2295#0" expanded="true" />
+                <element signature="e#2327#2328#0" expanded="true" />
+                <element signature="e#4080#4081#0" expanded="true" />
+                <element signature="e#4106#4107#0" expanded="true" />
+                <element signature="e#4229#4230#0" expanded="true" />
+                <element signature="e#4259#4260#0" expanded="true" />
+                <element signature="e#4367#4368#0" expanded="true" />
+                <element signature="e#4403#4404#0" expanded="true" />
+                <element signature="e#4562#4563#0" expanded="true" />
+                <element signature="e#4602#4603#0" expanded="true" />
+                <element signature="e#4722#4723#0" expanded="true" />
+                <element signature="e#4761#4762#0" expanded="true" />
+                <element signature="e#4929#4930#0" expanded="true" />
+                <element signature="e#4975#4976#0" expanded="true" />
+                <element signature="e#5099#5100#0" expanded="true" />
+                <element signature="e#5137#5138#0" expanded="true" />
+                <element signature="e#5294#5295#0" expanded="true" />
+                <element signature="e#5338#5339#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modell/Player.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+            <state relative-caret-position="358">
+              <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/modell/Enemy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -137,74 +109,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2900">
-              <caret line="194" column="29" selection-start-line="194" selection-start-column="29" selection-end-line="194" selection-end-column="29" />
+            <state relative-caret-position="2588">
+              <caret line="155" column="38" lean-forward="true" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/modell/PlayerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/BattleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+            <state relative-caret-position="18">
+              <caret line="170" selection-start-line="170" selection-end-line="170" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/modell/EnemyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/MainApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/package-info.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkstyle.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -241,6 +159,10 @@
       <find>Image</find>
       <find>build</find>
       <find>juni</find>
+      <find>site</find>
+      <find>getPlayerMo</find>
+      <find>jxr</find>
+      <find>jar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -261,9 +183,6 @@
         <option value="$PROJECT_DIR$/src/main/java/modell/MyButtonSkin.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/Character.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/modell/DoSomething.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/PlayerEntityDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/modell/GameMaster.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/MainApp.java" />
@@ -273,13 +192,16 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/package-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/package-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/modell/package-info.java" />
-        <option value="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/BattleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/CharacterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/modell/Enemy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/modell/Player.java" />
         <option value="$PROJECT_DIR$/checkstyle.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/modell/EnemyTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/modell/PlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/modell/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/PlayerEntityDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/DBManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/BattleController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -291,9 +213,19 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="game" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="196" />
-    <option name="y" value="-21" />
+    <option name="x" value="-7" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -303,6 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -409,11 +342,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557400985263" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557672332705" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -428,8 +360,10 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="modell" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\programok\JavaBeadando\RpgGame\src\main\resources\music" />
+      <recent name="D:\programok\JavaBeadando\RpgGame\src\main\java\app" />
+      <recent name="D:\programok\JavaBeadando\RpgGame\src\main\resources\Images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\programok\JavaBeadando\RpgGame\src\main\java\modell" />
@@ -439,10 +373,8 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\programok\JavaBeadando\RpgGame\src\main\resources\music" />
-      <recent name="D:\programok\JavaBeadando\RpgGame\src\main\java\app" />
-      <recent name="D:\programok\JavaBeadando\RpgGame\src\main\resources\Images" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -471,7 +403,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.aiDmgPlus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="game" />
       <extension name="coverage">
         <pattern>
@@ -481,13 +413,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="modell" />
       <option name="MAIN_CLASS_NAME" value="modell.PlayerTest" />
-      <option name="METHOD_NAME" value="aiDmgPlus" />
+      <option name="METHOD_NAME" value="PlayerTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.critDmgPlus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.dmgPlus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="game" />
       <extension name="coverage">
         <pattern>
@@ -497,13 +429,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="modell" />
       <option name="MAIN_CLASS_NAME" value="modell.PlayerTest" />
-      <option name="METHOD_NAME" value="critDmgPlus" />
+      <option name="METHOD_NAME" value="dmgPlus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.critPlus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="game" />
       <extension name="coverage">
         <pattern>
@@ -513,13 +445,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="modell" />
       <option name="MAIN_CLASS_NAME" value="modell.PlayerTest" />
-      <option name="METHOD_NAME" value="critPlus" />
+      <option name="METHOD_NAME" value="save" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="modell in game" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.statReset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="game" />
       <extension name="coverage">
         <pattern>
@@ -528,7 +460,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modell" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="modell.PlayerTest" />
+      <option name="METHOD_NAME" value="statReset" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -536,10 +470,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
-        <item itemvalue="JUnit.PlayerTest.critPlus" />
-        <item itemvalue="JUnit.modell in game" />
-        <item itemvalue="JUnit.PlayerTest.critDmgPlus" />
-        <item itemvalue="JUnit.PlayerTest.aiDmgPlus" />
+        <item itemvalue="JUnit.PlayerTest.PlayerTest" />
+        <item itemvalue="JUnit.PlayerTest.save" />
+        <item itemvalue="JUnit.PlayerTest.statReset" />
+        <item itemvalue="JUnit.PlayerTest.dmgPlus" />
       </list>
     </recent_temporary>
   </component>
@@ -579,35 +513,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PlayerTest_aiDmgPlus - 2019.04.11 at 13h 13m 29s.xml">
-      <configuration name="PlayerTest.aiDmgPlus" configurationId="JUnit" />
+    <history-entry file="EnemyTest - 2019.05.12 at 13h 16m 43s.xml">
+      <configuration name="EnemyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critDmgPlus - 2019.04.11 at 13h 14m 53s.xml">
-      <configuration name="PlayerTest.critDmgPlus" configurationId="JUnit" />
+    <history-entry file="EnemyTest - 2019.05.12 at 13h 21m 51s.xml">
+      <configuration name="EnemyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critPlus - 2019.04.11 at 13h 16m 11s.xml">
-      <configuration name="PlayerTest.critPlus" configurationId="JUnit" />
+    <history-entry file="EnemyTest - 2019.05.12 at 13h 23m 34s.xml">
+      <configuration name="EnemyTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="modell_in_game - 2019.04.11 at 13h 17m 28s.xml">
-      <configuration name="modell in game" configurationId="JUnit" />
+    <history-entry file="PlayerTest_dmgPlus - 2019.05.12 at 14h 20m 40s.xml">
+      <configuration name="PlayerTest.dmgPlus" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="modell_in_game - 2019.04.11 at 13h 18m 40s.xml">
-      <configuration name="modell in game" configurationId="JUnit" />
+    <history-entry file="PlayerTest_dmgPlus - 2019.05.12 at 14h 21m 02s.xml">
+      <configuration name="PlayerTest.dmgPlus" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critPlus - 2019.04.11 at 13h 19m 15s.xml">
-      <configuration name="PlayerTest.critPlus" configurationId="JUnit" />
+    <history-entry file="PlayerTest_statReset - 2019.05.12 at 14h 24m 25s.xml">
+      <configuration name="PlayerTest.statReset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critPlus - 2019.04.11 at 13h 19m 51s.xml">
-      <configuration name="PlayerTest.critPlus" configurationId="JUnit" />
+    <history-entry file="PlayerTest_statReset - 2019.05.12 at 14h 24m 55s.xml">
+      <configuration name="PlayerTest.statReset" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critPlus - 2019.04.11 at 13h 20m 21s.xml">
-      <configuration name="PlayerTest.critPlus" configurationId="JUnit" />
+    <history-entry file="PlayerTest_save - 2019.05.12 at 14h 40m 30s.xml">
+      <configuration name="PlayerTest.save" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critPlus - 2019.04.11 at 13h 22m 19s.xml">
-      <configuration name="PlayerTest.critPlus" configurationId="JUnit" />
+    <history-entry file="PlayerTest_PlayerTest - 2019.05.12 at 14h 46m 58s.xml">
+      <configuration name="PlayerTest.PlayerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_critPlus - 2019.05.08 at 08h 23m 01s.xml">
-      <configuration name="PlayerTest.critPlus" configurationId="JUnit" />
+    <history-entry file="PlayerTest_PlayerTest - 2019.05.12 at 14h 48m 21s.xml">
+      <configuration name="PlayerTest.PlayerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -620,10 +554,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="828" y="196" width="814" height="867" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.433687" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49898168" visible="true" weight="0.21272494" />
       <window_info id="Structure" order="1" sideWeight="0.50101835" side_tool="true" weight="0.19730078" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -633,11 +567,11 @@
       <window_info id="DB Browser" order="7" weight="0.33333334" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3270525" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34332424" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33916554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32839838" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32974428" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32974428" />
@@ -647,10 +581,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32969153" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19473007" />
@@ -727,33 +661,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/modell/MyButtonSkin.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/css/style" />
     <entry file="file://$PROJECT_DIR$/src/main/java/modell/DoSomething.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/PlayerEntityDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="103" column="38" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="196" column="12" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2115#2116#0" expanded="true" />
-            <element signature="e#2158#2159#0" expanded="true" />
-            <element signature="e#2192#2193#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,13 +691,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modell/GameMaster.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -802,16 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/WellcomeSceneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modell/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -822,57 +716,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BattleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2550">
-          <caret line="189" column="69" selection-start-line="189" selection-start-column="69" selection-end-line="189" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
+    <entry file="file://$PROJECT_DIR$/checkstyle.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/modell/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/modell/EnemyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding>
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/modell/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="116" column="45" selection-start-line="116" selection-start-column="45" selection-end-line="116" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/WellcomeSceneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-815">
+          <caret line="28" column="85" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -889,34 +781,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="513">
+          <caret line="43" column="59" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/package-info.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/modell/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="59">
+          <caret line="197" column="29" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkstyle.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/PlayerEntityDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="1">
+          <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/CharacterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/PlayerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2732#2733#0" expanded="true" />
+            <element signature="e#2760#2761#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2130#2131#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2182#2183#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2327#2328#0" expanded="true" />
+            <element signature="e#4080#4081#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4229#4230#0" expanded="true" />
+            <element signature="e#4259#4260#0" expanded="true" />
+            <element signature="e#4367#4368#0" expanded="true" />
+            <element signature="e#4403#4404#0" expanded="true" />
+            <element signature="e#4562#4563#0" expanded="true" />
+            <element signature="e#4602#4603#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
+            <element signature="e#4761#4762#0" expanded="true" />
+            <element signature="e#4929#4930#0" expanded="true" />
+            <element signature="e#4975#4976#0" expanded="true" />
+            <element signature="e#5099#5100#0" expanded="true" />
+            <element signature="e#5137#5138#0" expanded="true" />
+            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5338#5339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BattleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="194" column="29" selection-start-line="194" selection-start-column="29" selection-end-line="194" selection-end-column="29" />
+        <state relative-caret-position="2588">
+          <caret line="155" column="38" lean-forward="true" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
         </state>
       </provider>
     </entry>
