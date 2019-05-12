@@ -1,12 +1,11 @@
-# RpgGame
+# Clicker Game
 
 >General
 
 -Clicker Heroes game in java Maven.
--Player vs Ai
+-Player vs Ai.
 -Player can be stronger and stronger like in the rpg games.
--Players' have lot of stats like Money, Damage, Critical Chance, Critical damage,
-	Damage, Ai Damage, Lvl and more...
+-Players' have lot of stats like Money, Damage, Critical Chance, Critical damage, Damage, AiDamage, Lvl and more...
 
 >General infos
 
