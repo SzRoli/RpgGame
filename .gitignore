@@ -1,6 +1,6 @@
 .idea/
 *.iml
 target/
-BlackJackDB/
+RPGDB/
 derby.log
 
