@@ -1,8 +1,7 @@
 package dao;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import org.tinylog.Logger;
 import javax.persistence.*;
 
 /**
@@ -12,7 +11,7 @@ public class DBManager {
     /**
      * Logger instance for logging.
      */
-    private static final Logger LOGGER = LoggerFactory.getLogger(DBManager.class.getName());
+
 
     /**
      * One instance of DBManager class.
@@ -54,7 +53,8 @@ public class DBManager {
      * @throws Exception in case JPA fault.
      */
     public void connectDB() throws Exception{
-        //etity menegereket tudok létrehozni
+        Logger.info("Sucssesful connected!");
+
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("tableb");
         entityManager = entityManagerFactory.createEntityManager();
 
@@ -66,7 +66,7 @@ public class DBManager {
      *
      */
     public void disconnectDB(){
-
+        Logger.info("Disconnected!");
         entityManager.close();
         entityManager = null;
 

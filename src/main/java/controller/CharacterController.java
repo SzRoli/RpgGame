@@ -20,6 +20,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import modell.Player;
+import org.tinylog.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -110,13 +111,14 @@ public class CharacterController implements Initializable {
 
         if(player.getCritical()>=100){
             critChancePlus.setDisable(true);
+            Logger.info("Critical chance disabled!");
         }
     }
     @FXML
     void critDmgPlusButtonClick(ActionEvent event) {
 
         player.critDmgPlus(critDmgGoldAmount);
-
+        Logger.info("Critical damage plus.");
         setFields();
 
     }
@@ -124,7 +126,7 @@ public class CharacterController implements Initializable {
     void aiDmgPlusButtonClick(ActionEvent event) {
 
         player.aiDmgPlus(aiDmgGoldAmount);
-
+        Logger.info("Ai damage plus.");
         setFields();
 
     }
@@ -132,7 +134,7 @@ public class CharacterController implements Initializable {
     void resetButtonClick(ActionEvent event) {
 
         player.statReset();
-
+        Logger.info("Stat reset.");
         setFields();
 
         critChancePlus.setDisable(false);
@@ -140,24 +142,28 @@ public class CharacterController implements Initializable {
     }
     @FXML
     void PlayButtonClick(ActionEvent event) {
-        if(player.getMoney() > 0 && player.getMoney() >= Integer.parseInt(yourMoney.getText()) &&
-                number.getText() != null && Integer.parseInt(number.getText()) < 11 && Integer.parseInt(number.getText()) > 0){
+        try {
+            if (player.getMoney() > 0 && player.getMoney() >= Integer.parseInt(yourMoney.getText()) &&
+                    number.getText() != null && Integer.parseInt(number.getText()) < 11 && Integer.parseInt(number.getText()) > 0) {
 
-            player.setMoney(player.getMoney()-Integer.parseInt(yourMoney.getText()));
+                player.setMoney(player.getMoney() - Integer.parseInt(yourMoney.getText()));
 
-            randomNumber = random.nextInt(10)+1;
-
-            setFields();
-
-            if(randomNumber == Integer.parseInt(number.getText())){
-                player.setMoney(player.getMoney()+Integer.parseInt(yourMoney.getText()) * 10);
+                randomNumber = random.nextInt(10) + 1;
 
                 setFields();
 
-                youGet.setText("You win: " + format(Integer.parseInt(yourMoney.getText()) * 10)+"G");
-            }else{
-                youGet.setText("You Lose: " + format(Integer.parseInt(yourMoney.getText()))+"G");
+                if (randomNumber == Integer.parseInt(number.getText())) {
+                    player.setMoney(player.getMoney() + Integer.parseInt(yourMoney.getText()) * 10);
+
+                    setFields();
+
+                    youGet.setText("You win: " + format(Integer.parseInt(yourMoney.getText()) * 10) + "G");
+                } else {
+                    youGet.setText("You Lose: " + format(Integer.parseInt(yourMoney.getText())) + "G");
+                }
             }
+        }catch(Exception e){
+            Logger.error("Dont get number!");
         }
 
 
@@ -169,7 +175,7 @@ public class CharacterController implements Initializable {
     void dmgPlusButtonClick(ActionEvent event) {
 
         player.dmgPlus(dmgGoldAmount);
-
+        Logger.info("Damage plus.");
         setFields();
 
 
@@ -206,6 +212,7 @@ public class CharacterController implements Initializable {
 
             window.setScene(newGameViewScene);
             window.show();
+            Logger.info("Next scene!");
         }catch(IOException ex){
             System.out.println("Nope! "+ex);
         }
@@ -238,6 +245,8 @@ public class CharacterController implements Initializable {
         critDmgBarGold.setText(""+format((int)(player.getCriticalDmg() * critDmgGoldAmount))+"G");
 
         player.save();
+
+        Logger.info("Fields are setted");
     }
 
 

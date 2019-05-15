@@ -27,6 +27,7 @@ import javafx.util.Duration;
 
 import modell.Enemy;
 import modell.Player;
+import org.tinylog.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -105,6 +106,7 @@ public class BattleController implements Initializable{
                 enemy.setLvl(enemy.getLvl()-1);
                 //lvl--;
                 lvlText.setText(""+enemy.getLvl());
+                Logger.info("Previous LvL!");
 
         }
     }
@@ -124,6 +126,7 @@ public class BattleController implements Initializable{
                         //lvl++;
                         enemy.setLvl(enemy.getLvl()+1);
                         lvlText.setText("" + enemy.getLvl());
+                        Logger.info("Next LvL!");
 
                 }
 
@@ -135,6 +138,7 @@ public class BattleController implements Initializable{
         makeFadeTrans(1,0);
         try{
             exec.shutdown();
+            Logger.info("Back to the previous scene!");
         }catch(Exception e){
             System.out.println(e);
         }
@@ -151,6 +155,7 @@ public class BattleController implements Initializable{
 
             window.setScene(newGameViewScene);
             window.show();
+            Logger.info("load next scene!");
         }catch(IOException ex){
             System.out.println("Could open the next fxml! "+ex);
         }
@@ -159,7 +164,7 @@ public class BattleController implements Initializable{
     void winCheck(int currentHp){
 
         if(currentHp <= 0){
-
+            Logger.info("Monster destroyed");
             if(player.getResetCount()>0){
                 player.setMoney((int)(player.getMoney()+(50*((double)enemy.getLvl()/2))*(player.getResetCount()+1)));
             }else{
@@ -214,12 +219,6 @@ public class BattleController implements Initializable{
             player.save();
 
         }
-    }
-
-    private void bossTimer(){
-
-        System.out.println("boss: "+30+" s");
-
     }
 
     private String format(int number){
@@ -345,6 +344,7 @@ public class BattleController implements Initializable{
         enemy.setMaxHp(enemy.getHp());
 
         enemyHpText.setText(""+format(enemy.getHp())+" / "+format(enemy.getMaxHp()));
+        Logger.info("Texts setted");
 
 
     }

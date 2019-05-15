@@ -12,8 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.tinylog.Logger;
 
 
 import java.io.IOException;
@@ -22,7 +21,7 @@ import java.util.ResourceBundle;
 
 public class WellcomeSceneController implements Initializable{
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WellcomeSceneController.class.getName());
+
 
     public static PlayerEntity playerEntity = new PlayerEntity();
 
@@ -66,7 +65,7 @@ public class WellcomeSceneController implements Initializable{
             window.setScene(newGameViewScene);
             window.show();
 
-            LOGGER.info("Players's cararachter created!");
+            Logger.info("Players's cararachter created!");
 
         }else{
 
@@ -78,7 +77,7 @@ public class WellcomeSceneController implements Initializable{
             window.setScene(newGameViewScene);
             window.show();
 
-            LOGGER.info("Players's cararachter loaded!");
+            Logger.info("Players's cararachter loaded!");
         }
 
 

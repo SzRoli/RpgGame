@@ -49,8 +49,8 @@
       <Button id="critDmgPlus" fx:id="critDmgPlus" layoutX="194.0" layoutY="291.0" mnemonicParsing="false" onAction="#critDmgPlusButtonClick" text="+" />
       <TextField id="critDmgBar" fx:id="critDmgBar" editable="false" layoutX="66.0" layoutY="291.0" prefHeight="25.0" prefWidth="57.0" />
       <Button id="resetButton" fx:id="resetButton" layoutX="21.0" layoutY="361.0" mnemonicParsing="false" onAction="#resetButtonClick" text="RESET" />
-      <TextField id="resetGold" fx:id="resetGold" layoutX="80.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0" />
-          <TextField id="youGet" fx:id="youGet" layoutX="239.0" layoutY="365.0" prefHeight="25.0" prefWidth="122.0" />
+      <TextField id="resetGold" fx:id="resetGold" editable="false" layoutX="80.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0" />
+          <TextField id="youGet" fx:id="youGet" editable="false" layoutX="239.0" layoutY="365.0" prefHeight="25.0" prefWidth="122.0" />
       <TextField id="aiDmgBar" fx:id="aiDmgBar" editable="false" layoutX="66.0" layoutY="324.0" prefHeight="25.0" prefWidth="57.0" />
       <Button id="aiDmgPlus" fx:id="aiDmgPlus" layoutX="194.0" layoutY="324.0" mnemonicParsing="false" onAction="#aiDmgPlusButtonClick" text="+" />
       <TextField id="aiDmgBarGold" fx:id="aiDmgBarGold" editable="false" layoutX="132.0" layoutY="324.0" prefHeight="25.0" prefWidth="57.0" />
